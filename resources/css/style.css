@@ -1,22 +1,22 @@
 .blue-box {
   position: absolute;
-  top: -103px;
-  width: 1082px;
+  top: -250px;
+  width: 1482px;
   height: 560px;
   background: rgba(9, 89, 152, 0.12);
   z-index: 0;
   border-radius: 48px;
-  right: -323px;
-  transform: rotate(28deg);
+  right: -370px;
+  transform: rotate(35deg);
 }
 
 .blue-box::before {
   content: "";
   position: absolute;
   top: -12px;
-  width: 1082px;
+  width: 1482px;
   height: 560px;
-  background: #095998;
+  background: #ff3c3c;
   z-index: 0;
   border-radius: 48px;
   right: -35px;
@@ -25,6 +25,56 @@
 
 .container {
   padding: 0px 84px;
+}
+
+.slider-header {
+  width: 100%;
+  position: relative;
+}
+
+.slider-header .swiper-container {
+  min-height: 400px;
+  margin-top: 70px;
+}
+
+.slider-header .swiper-pagination {
+  text-align: left;
+}
+
+.slider-header .swiper-slide {
+  position: relative;
+}
+
+.slider-header .swipe-slide-img {
+  position: absolute;
+  right: -100px;
+  top: 0;
+}
+
+.slider-header .swipe-slide-img img {
+  width: 80%;
+}
+
+.slider-header .swipe-slide-custom {
+  width: 200px !important;
+}
+
+.slider-header .swiper-pagination-bullet-active {
+  width: 36px;
+  border-radius: 10px;
+  background: #095998 !important;
+}
+
+.content-service {
+  position: relative;
+}
+
+.content-service ul li a g {
+  stroke: #fff;
+}
+
+.content-service ul li a path {
+  fill: #fff;
 }
 
 @media screen and (max-width: 992px) {
