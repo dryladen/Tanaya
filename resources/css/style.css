@@ -77,6 +77,11 @@
   fill: #fff;
 }
 
+#example_filter, #example_length {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
 @media screen and (max-width: 992px) {
   .blue-box {
     display: none;

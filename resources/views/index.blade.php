@@ -10,41 +10,41 @@
   <link rel="stylesheet" href="https://qti.co.id/vendor/animate.css/animate.min.css">
 </head>
 
-<body class="font-popp overflow-x-hidden">
+<body class="relative overflow-x-hidden font-popp">
   <!-- ! Navbar -->
   <header class="md:px-20 lg:px-32 px-4 h-[70px] bg-slate-50 fixed z-10 w-full flex flex-wrap items-center py-2 shadow-md">
-    <div class="flex-1 flex justify-between items-center">
+    <div class="flex items-center justify-between flex-1">
       <a href="#" class="text-4xl font-bold">TAMA</a>
     </div>
     <!-- Strip bar -->
-    <label for="menu-toggle" class="pointer-cursor md:hidden block">
-      <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <label for="menu-toggle" class="block pointer-cursor md:hidden">
+      <svg class="text-gray-900 fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
         <title>menu</title>
         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
       </svg>
     </label>
     <input class="hidden" type="checkbox" id="menu-toggle" />
-    <div class="hidden md:flex md:items-end md:w-auto w-full text-sm " id="menu">
+    <div class="hidden w-full text-sm md:flex md:items-end md:w-auto " id="menu">
       <nav>
         <ul class="md:flex items-center text-[14px] justify-evenly text-gray-600 pt-4 md:pt-0">
           <li>
-            <a class="md:p-2 py-3 px-0 block" href="#home">Beranda</a>
+            <a class="block px-0 py-3 md:p-2" href="#home">Beranda</a>
           </li>
           <li>
-            <a class="md:p-2 py-3 px-0 block" href="#about-us">Tentang Kami</a>
+            <a class="block px-0 py-3 md:p-2" href="#about-us">Tentang Kami</a>
           </li>
           <li>
-            <a class="md:p-2 py-3 px-0 block" href="#our-service">Produk & Layanan</a>
+            <a class="block px-0 py-3 md:p-2" href="#our-service">Produk & Layanan</a>
           </li>
           <li>
-            <a class="md:p-2 py-3 px-0 block" href="#our-client">Project</a>
+            <a class="block px-0 py-3 md:p-2" href="#our-client">Project</a>
           </li>
           <li>
-            <a class="md:p-2 py-3 px-0 block" href="#contact">Kontak</a>
+            <a class="block px-0 py-3 md:p-2" href="#contact">Kontak</a>
           </li>
           <li>
-            <a class="md:p-2 py-3 px-0 block" href="Company_Profil_QTI.pdf" target="_blank" title="Unduh Company Profile">
-              <img src="download-icon.png" alt="">
+            <a class="block px-0 py-3 md:p-2" href="Company_Profil_QTI.pdf" target="_blank" title="Unduh Company Profile">
+              <img src="{{ asset('img/download-icon.png')}}" alt="">
             </a>
           </li>
         </ul>
@@ -52,23 +52,23 @@
     </div>
   </header>
   <!-- Carousel -->
-  <section class="overflow-hidden relative pt-8 mb-12 h-full bg-slate-100" id="home">
+  <section class="relative h-full pt-8 mb-12 overflow-hidden bg-slate-100" id="home">
     <div class="blue-box"></div>
     <div class="flex items-center md:mx-20 lg:mx-32 ">
       <div class="slider-header ">
         <div class="swiper-container swiper-container-initialized swiper-container-horizontal" id="swiper-with-pagination">
           <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
             <!-- Slide 1 -->
-            <div class="swiper-slide swiper-slide-active h-64">
+            <div class="h-64 swiper-slide swiper-slide-active">
               <div class="grid grid-cols-12 px-4">
-                <div class="col-span-12 sm:col-span-6 lg:col-span-6 xl:col-span-4 mb-4 lg:mb-0 wow slideInLeft w-full" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: slideInLeft;">
+                <div class="w-full col-span-12 mb-4 sm:col-span-6 lg:col-span-6 xl:col-span-4 lg:mb-0 wow slideInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: slideInLeft;">
                   <h1 class="text-[54px] leading-[67.2px] text-slate-800 font-bold">TANAYA <br> ARTHA <br> GAUTAMA</h1>
-                  <h4 class="text-xl mb-2 text-red-500">MINING & ENVIROMENT CONSULTANT</h4>
+                  <h4 class="mb-2 text-xl text-red-500">MINING & ENVIROMENT CONSULTANT</h4>
                   <div class="mt-12">
-                    <a href="#about-us" class="bg-slate-600 text-white p-1 px-4 rounded-full">Explore</a>
+                    <a href="#about-us" class="p-1 px-4 text-white rounded-full bg-slate-600">Explore</a>
                   </div>
                 </div>
-                <div class="col-span-12 sm:col-span-6 lg:col-span-6 xl:col-span-8 items-center flex wow slideInRight w-full" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: slideInRight;">
+                <div class="flex items-center w-full col-span-12 sm:col-span-6 lg:col-span-6 xl:col-span-8 wow slideInRight" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: slideInRight;">
                   <img src="{{asset('img/meeting.png')}}" class="md:w-[450px] lg:w-full px-4">
                 </div>
               </div>
@@ -79,9 +79,9 @@
                 <div class="col-span-12 sm:col-span-4">
                   <!-- <img src="https://qti.co.id/images/slider/logo-analitiq.png" class="img-fluid"> -->
                   <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam est ea fugiat enim quo facere excepturi iste minus! Quam non tempora quasi sed asperiores fugiat accusantium libero. Perspiciatis, eveniet dignissimos?</p>
-                  <a href="#about-us" class="mt-3 block w-fit bg-blue-700 text-white p-1 px-4 rounded-full">Details</a>
+                  <a href="#about-us" class="block p-1 px-4 mt-3 text-white bg-blue-700 rounded-full w-fit">Details</a>
                 </div>
-                <div class="col-span-12 sm:col-span-8 grid place-items-end">
+                <div class="grid col-span-12 sm:col-span-8 place-items-end">
                   <img src="https://qti.co.id/images/slider/analytics.png" width="500">
                 </div>
               </div>
@@ -92,36 +92,36 @@
                 <div class="col-span-12 sm:col-span-4">
                   <h4 class="text-2xl">Lorem ipsum dolor sit amet consectetur</h4>
                   <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam amet illo adipisci dignissimos deleniti consectetur nobis neque doloribus odit! Praesentium quos totam repellat voluptatibus eos commodi deleniti aut rem animi.</p>
-                  <a href="#about-us" class="mt-3 block w-fit bg-blue-700 text-white p-1 px-4 rounded-full">Details</a>
+                  <a href="#about-us" class="block p-1 px-4 mt-3 text-white bg-blue-700 rounded-full w-fit">Details</a>
                 </div>
-                <div class="col-span-12 sm:col-span-8 grid place-items-end">
+                <div class="grid col-span-12 sm:col-span-8 place-items-end">
                   <img src="https://qti.co.id/images/slider/covid.png" class="img-fluid">
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-pagination  swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span></div>
+          <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span></div>
           <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
         </div>
       </div>
     </div>
   </section>
-  <section class="overflow-x-hidden mb-16" id="about-us">
+  <section class="mb-16 overflow-x-hidden" id="about-us">
     <!-- <div class="absolute left-[-325px] hidden md:block ">
       <img src="https://qti.co.id/images/objek-left.png">
     </div> -->
-    <div class="mx-4 md:mx-32 py-16 my-16">
+    <div class="py-16 mx-4 my-16 md:mx-32">
       <div class="grid grid-cols-12 gap-0 md:gap-8">
-        <div class="col-span-12 md:col-span-4 grid place-items-center wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+        <div class="grid col-span-12 md:col-span-4 place-items-center wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
           <img src="{{asset('img/achievment.png')}}" class="w-52 md:w-72">
         </div>
-        <div class="col-span-12 md:col-span-8 h-full flex items-center">
+        <div class="flex items-center h-full col-span-12 md:col-span-8">
           <div class="my-4 wow fadeInRight " data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
-            <h4 class="text-red-600 uppercase text-2xl text-center">Tentang Perusahaan</h4>
-            <p class="text-justify mt-4 wow fadeInRight" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">PT. TANAYA ARTHA GAUTAMA (TAMA)
+            <h4 class="text-2xl text-center text-red-600 uppercase">Tentang Perusahaan</h4>
+            <p class="mt-4 text-justify wow fadeInRight" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">PT. TANAYA ARTHA GAUTAMA (TAMA)
               adalah perusahaan dibidang Jasa Konsultan Pertambangan dan Lingkungan berdomisili di Samarinda, Kalimantan Timur.
             </p>
-            <p class="text-justify mt-4 wow fadeInRight" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">TAMA telah menghimpun dan memiliki
+            <p class="mt-4 text-justify wow fadeInRight" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">TAMA telah menghimpun dan memiliki
               sejumlah staf dan tenaga ahli yang berpengalaman serta kompeten di bidangnya masing-masing, sehingga setiap pekerjaan ditangani profesional.
             </p>
           </div>
@@ -129,47 +129,47 @@
       </div>
     </div>
   </section>
-  <section class="overflow-x-hidden px-4 md:px-32 py-12 mb-12" id="our-service">
+  <section class="px-4 py-12 mb-12 overflow-x-hidden md:px-32" id="our-service">
     <!-- <div class="absolute right-[-180px]">
       <img src="https://qti.co.id/images/objek-right.png">
     </div> -->
     <div class="py-16">
       <div class="grid grid-cols-12">
         <div class="col-span-12">
-          <div class="flex flex-col justify-center items-center wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-            <h4 class="text-red-600 uppercase text-2xl mb-2">Produk & Layanan</h4>
-            <p class="text-sm w md:w-2/2 text-center">Tanaya Artha Gautama menghadirkan layanan terbaik untuk memenuhi kebutuhan produktivitas dan kredibilitas bisnis Anda</p>
+          <div class="flex flex-col items-center justify-center wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+            <h4 class="mb-2 text-2xl text-red-600 uppercase">Produk & Layanan</h4>
+            <p class="text-sm text-center w md:w-2/2">Tanaya Artha Gautama menghadirkan layanan terbaik untuk memenuhi kebutuhan produktivitas dan kredibilitas bisnis Anda</p>
           </div>
-          <div class="content-service mt-8">
+          <div class="mt-8 content-service">
             <ul class="flex flex-col space-y-6">
               <li class="shadow-[0_0_6px_0px_rgba(0,0,0,0.3)] text-slate-800 rounded-lg w-full my-0 wow fadeInLeft space-y-2 " data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-                <a class="md:py-4 md:px-6 lg:px-6 lg:pt-6 flex items-center space-x-4 tab-button">
-                  <h4 class="text-2xl p-4 md:p-0 text-center md:text-start">Konsultasi, Perencanaan, dan Pelaksanaan</h4>
+                <a class="flex items-center space-x-4 md:py-4 md:px-6 lg:px-6 lg:pt-6 tab-button">
+                  <h4 class="p-4 text-2xl text-center md:p-0 md:text-start">Konsultasi, Perencanaan, dan Pelaksanaan</h4>
                 </a>
-                <ul class="px-4 sm:px-6 pb-6 space-y-4">
-                  <li class="wow fadeInLeft space-y-2 hover:-translate-y-2 transition-all" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-                    <p class="rounded-t-md text-lg bg-slate-600 text-white px-4 py-2">1. Eksplorasi</p>
-                    <p class="rounded-b-md shadow-lg text-sm px-4 pb-2 text-justify text-slate-600">
+                <ul class="px-4 pb-6 space-y-4 sm:px-6">
+                  <li class="space-y-2 transition-all wow fadeInLeft hover:-translate-y-2" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                    <p class="px-4 py-2 text-lg text-white rounded-t-md bg-slate-600">1. Eksplorasi</p>
+                    <p class="px-4 pb-2 text-sm text-justify shadow-lg rounded-b-md text-slate-600">
                       Manajemen Eksplorasi, Penentuan Posisi,
                       Pemetaan Topografi dan Geologi, Geofisika,
                       Pemboran Eksplorasi dan Perhitungan Sumber
                       Daya & Cadangan
                     </p>
                   </li>
-                  <li class="space-y-2 wow fadeInLeft hover:-translate-y-2 transition-all" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-                    <p class="rounded-t-md text-lg bg-slate-600 text-white px-4 py-2">2. Studi Kelayakan</p>
-                    <p class="rounded-b-md shadow-lg text-sm px-4 pb-2 text-justify text-slate-600">Penyusunan AMDAL dan Studi Kelayakan</p>
+                  <li class="space-y-2 transition-all wow fadeInLeft hover:-translate-y-2" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                    <p class="px-4 py-2 text-lg text-white rounded-t-md bg-slate-600">2. Studi Kelayakan</p>
+                    <p class="px-4 pb-2 text-sm text-justify shadow-lg rounded-b-md text-slate-600">Penyusunan AMDAL dan Studi Kelayakan</p>
                   </li>
                 </ul>
               </li>
               <li class="shadow-[0_0_6px_0px_rgba(0,0,0,0.3)] text-slate-800 rounded-lg w-full my-0 wow fadeInRight space-y-2 " data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
-                <a class="md:py-4 md:px-6 lg:px-6 lg:pt-6 flex items-center space-x-4 tab-button">
-                  <h4 class="text-2xl p-4 md:p-0 text-center md:text-start">Konsultasi dan Perencanaan</h4>
+                <a class="flex items-center space-x-4 md:py-4 md:px-6 lg:px-6 lg:pt-6 tab-button">
+                  <h4 class="p-4 text-2xl text-center md:p-0 md:text-start">Konsultasi dan Perencanaan</h4>
                 </a>
-                <ul class="px-4 sm:px-6 pb-6">
-                  <li class="wow fadeInRight space-y-2 hover:-translate-y-2 transition-all" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
-                    <p class="rounded-t-md text-lg bg-slate-600 text-white px-4 py-2">Pasca Tambang dan Reklamas</p>
-                    <p class="rounded-b-md shadow-lg text-sm px-4 pb-2 text-justify text-slate-600">Reklamasi dan Penutupan Tambang</p>
+                <ul class="px-4 pb-6 sm:px-6">
+                  <li class="space-y-2 transition-all wow fadeInRight hover:-translate-y-2" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+                    <p class="px-4 py-2 text-lg text-white rounded-t-md bg-slate-600">Pasca Tambang dan Reklamas</p>
+                    <p class="px-4 pb-2 text-sm text-justify shadow-lg rounded-b-md text-slate-600">Reklamasi dan Penutupan Tambang</p>
                   </li>
                 </ul>
               </li>
@@ -179,132 +179,436 @@
       </div>
     </div>
   </section>
-  <section class="overflow-hidden relative mb-16" id="our-client">
+  <section class="relative mb-16 overflow-hidden" id="our-client">
     <!-- <div class="absolute left-[-320px] top-[-70px]">
       <img src="https://qti.co.id/images/objek-left.png">
     </div> -->
-    <div class="py-16 my-16">
+    <div class="py-16 my-16 sm:mx-12 md:mx-12 lg:mx-32">
       <div class="grid grid-cols-12">
         <div class="col-span-12 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
           <div class="text-center">
-            <h4 class="text-blue-700 uppercase text-2xl mb-2">Bagian dari Klien Kami</h4>
+            <h4 class="mb-2 text-2xl text-blue-700 uppercase">Bagian dari Klien Kami</h4>
           </div>
-          <div class="flex items-center justify-center space-x-8 w-full mt-8">
-            <div class="">
-              <picture>
-                <source media=" (min-width:992px)" srcset="https://qti.co.id/images/clients/kejaksaan.png">
-                <source media="(min-width:1200px)" srcset="https://qti.co.id/images/clients/kejaksaan.png">
-                <source media="(min-width:768px)" srcset="https://qti.co.id/images/clients/kejaksaan.png">
-                <img src="https://qti.co.id/images/clients/kejaksaan.png" alt="Flowers" style="width:auto;">
-              </picture>
+          <!-- <div class="flex items-center py-12 swiper-client">
+            <div class="flex items-end space-x-2 swiper-wrapper">
+              <div class="flex flex-col items-center justify-end w-24 h-full mx-0 space-y-4 swiper-slide"><img src="{{asset('/client-img/abi-smd.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-end w-24 h-full mx-0 space-y-4 swiper-slide"><img src="{{asset('/client-img/amethys.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-end w-24 h-full mx-0 space-y-4 swiper-slide"><img src="{{asset('/client-img/anggana-coal.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-end w-24 h-full mx-0 space-y-4 swiper-slide"><img src="{{asset('/client-img/anggaraksa.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-end w-24 h-full mx-0 space-y-4 swiper-slide"><img src="{{asset('/client-img/anugrah-pratama.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-end w-24 h-full mx-0 space-y-4 swiper-slide"><img src="{{asset('/client-img/aragon-tambang.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-end w-24 h-full mx-0 space-y-4 swiper-slide"><img src="{{asset('/client-img/arwana-prima.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-center w-24 mx-0 space-y-4 swiper-slide"><img src="{{asset('/client-img/batuah-energi.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-center w-24 mx-0 space-y-4 swiper-slide"><img src="{{asset('/client-img/berau-usaha-mandiri.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-center w-24 mx-0 space-y-4 swiper-slide"><img src="{{asset('/client-img/berau-jaya-energy.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-center w-24 mx-0 space-y-4 swiper-slide">
+              </div>
             </div>
-            <div>
-              <picture>
-                <source media="(min-width:992px)" srcset="https://qti.co.id/images/clients/mandiri.png">
-                <source media="(min-width:1200px)" srcset="https://qti.co.id/images/clients/mandiri.png">
-                <source media="(min-width:768px)" srcset="https://qti.co.id/images/clients/mandiri.png">
-                <img src="https://qti.co.id/images/clients/mandiri.png" alt="Flowers" style="width:auto;">
-              </picture>
+          </div> -->
+          <div class="flex items-center justify-center py-12 ">
+            <div class="grid gap-0 px-4 sm:grid-cols-2 md:grid-cols-6 md:gap-6">
+              <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
+                <img src="{{asset('/client-img/abi-smd.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
+                <img src="{{asset('/client-img/amethys.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
+                <img src="{{asset('/client-img/anggana-coal.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
+                <img src="{{asset('/client-img/anggaraksa.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
+                <img src="{{asset('/client-img/anugrah-pratama.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
+                <img src="{{asset('/client-img/aragon-tambang.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
+                <img src="{{asset('/client-img/arwana-prima.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-center w-full mx-0 space-y-4">
+                <img src="{{asset('/client-img/batuah-energi.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-center w-full mx-0 space-y-4">
+                <img src="{{asset('/client-img/berau-usaha-mandiri.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
+              <div class="flex flex-col items-center justify-center w-full mx-0 space-y-4">
+                <img src="{{asset('/client-img/berau-jaya-energy.png')}}" alt="Flowers" class="w-2/3 mx-0">
+                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+              </div>
             </div>
-            <div>
-              <picture>
-                <source media="(min-width:992px)" srcset="https://qti.co.id/images/clients/bgr.png">
-                <source media="(min-width:1200px)" srcset="https://qti.co.id/images/clients/bgr.png">
-                <source media="(min-width:768px)" srcset="https://qti.co.id/images/clients/bgr.png">
-                <img src="https://qti.co.id/images/clients/bgr.png" alt="Flowers" style="width:auto;">
-              </picture>
-            </div>
-            <div>
-              <picture>
-                <source media="(min-width:992px)" srcset="https://qti.co.id/images/clients/peruri.png">
-                <source media="(min-width:1200px)" srcset="https://qti.co.id/images/clients/peruri.png">
-                <source media="(min-width:768px)" srcset="https://qti.co.id/images/clients/peruri.png">
-                <img src="https://qti.co.id/images/clients/peruri.png" alt="Flowers" style="width:auto;">
-              </picture>
-            </div>
-            <div>
-              <picture>
-                <source media="(min-width:992px)" srcset="https://qti.co.id/images/clients/pupuk.png">
-                <source media="(min-width:1200px)" srcset="https://qti.co.id/images/clients/pupuk.png">
-                <source media="(min-width:768px)" srcset="https://qti.co.id/images/clients/pupuk.png">
-                <img src="https://qti.co.id/images/clients/pupuk.png" alt="Flowers" style="width:auto;">
-              </picture>
-            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="overflow-hidden mb-16" id="our-partner">
-    <div class="py-16 my-16">
+  <section class="mb-16 overflow-hidden sm:mx-12 md:mx-12 lg:mx-32" id="our-partner">
+    <div class="py-16 my-16 ">
       <div class="grid grid-cols-12">
         <div class="col-span-12 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
           <div class="text-center">
-            <h4 class="text-blue-700 uppercase text-2xl">Riwayat Pekerjaan</h4>
+            <h4 class="my-12 text-2xl text-blue-700 uppercase">Riwayat Pekerjaan</h4>
           </div>
-          <div class="flex justify-center space-x-8 mt-8">
-            <div>
-              <picture>
-                <source media="(min-width:892px)" srcset="https://qti.co.id/images/partner/Mirantis_logo.svg.png">
-                <source media="(min-width:1200px)" srcset="https://qti.co.id/images/partner/Mirantis_logo.svg.png">
-                <source media="(min-width:768px)" srcset="https://qti.co.id/images/partner/Mirantis_logo.svg.png">
-                <img src="https://qti.co.id/images/partner/Mirantis_logo.svg.png" alt="Mirantis" style="width:auto;">
-              </picture>
-            </div>
-            <div>
-              <picture>
-                <source media="(min-width:892px)" srcset="https://qti.co.id/images/partner/Westcon.png">
-                <source media="(min-width:1200px)" srcset="https://qti.co.id/images/partner/Westcon.png">
-                <source media="(min-width:768px)" srcset="https://qti.co.id/images/partner/Westcon.png">
-                <img src="https://qti.co.id/images/partner/Westcon.png" alt="Westcon" style="width:auto;">
-              </picture>
-            </div>
+          <div class="text-center">
+            <h4 class="order-first text-slate-700 uppercase font-extrabold text-[120px]  sm:text-5xl">
+              <span class="animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-transactions)] before:content-[counter(num)]" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"> <span class="sr-only">557</span></span>
+            </h4>
+            <span class="text-lg font-semibold text-slate-400">Number Of Project</span>
           </div>
+          <div class="px-4 mx-auto my-12 sm:px-12 lg:px-12">
+            <table id="example" class="w-full table-fixed">
+              <thead class="text-sm bg-slate-600">
+                <tr class="text-white texts">
+                  <th class="px-4 py-2">Name</th>
+                  <th class="px-4 py-2">Position</th>
+                  <th class="px-4 py-2">Office</th>
+                  <th class="px-4 py-2">Age</th>
+                  <th class="px-4 py-2">Start date</th>
+                  <th class="px-4 py-2">Salary</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm text-center text-slate-500">
+                <tr>
+                  <td class="px-4 py-2 border">Tiger Nixon</td>
+                  <td class="px-4 py-2 border">System Architect</td>
+                  <td class="px-4 py-2 border">Edinburgh</td>
+                  <td class="px-4 py-2 border">61</td>
+                  <td class="px-4 py-2 border">2011/04/25</td>
+                  <td class="px-4 py-2 border">$320,800</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Garrett Winters</td>
+                  <td class="px-4 py-2 border">Accountant</td>
+                  <td class="px-4 py-2 border">Tokyo</td>
+                  <td class="px-4 py-2 border">63</td>
+                  <td class="px-4 py-2 border">2011/07/25</td>
+                  <td class="px-4 py-2 border">$170,750</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Ashton Cox</td>
+                  <td class="px-4 py-2 border">Junior Technical Author</td>
+                  <td class="px-4 py-2 border">San Francisco</td>
+                  <td class="px-4 py-2 border">66</td>
+                  <td class="px-4 py-2 border">2009/01/12</td>
+                  <td class="px-4 py-2 border">$86,000</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Cedric Kelly</td>
+                  <td class="px-4 py-2 border">Senior Javascript Developer</td>
+                  <td class="px-4 py-2 border">Edinburgh</td>
+                  <td class="px-4 py-2 border">22</td>
+                  <td class="px-4 py-2 border">2012/03/29</td>
+                  <td class="px-4 py-2 border">$433,060</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Airi Satou</td>
+                  <td class="px-4 py-2 border">Accountant</td>
+                  <td class="px-4 py-2 border">Tokyo</td>
+                  <td class="px-4 py-2 border">33</td>
+                  <td class="px-4 py-2 border">2008/11/28</td>
+                  <td class="px-4 py-2 border">$162,700</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Brielle Williamson</td>
+                  <td class="px-4 py-2 border">Integration Specialist</td>
+                  <td class="px-4 py-2 border">New York</td>
+                  <td class="px-4 py-2 border">61</td>
+                  <td class="px-4 py-2 border">2012/12/02</td>
+                  <td class="px-4 py-2 border">$372,000</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Herrod Chandler</td>
+                  <td class="px-4 py-2 border">Sales Assistant</td>
+                  <td class="px-4 py-2 border">San Francisco</td>
+                  <td class="px-4 py-2 border">59</td>
+                  <td class="px-4 py-2 border">2012/08/06</td>
+                  <td class="px-4 py-2 border">$137,500</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Herrod Chandler</td>
+                  <td class="px-4 py-2 border">Sales Assistant</td>
+                  <td class="px-4 py-2 border">San Francisco</td>
+                  <td class="px-4 py-2 border">59</td>
+                  <td class="px-4 py-2 border">2012/08/06</td>
+                  <td class="px-4 py-2 border">$137,500</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Ashton Cox</td>
+                  <td class="px-4 py-2 border">Junior Technical Author</td>
+                  <td class="px-4 py-2 border">San Francisco</td>
+                  <td class="px-4 py-2 border">66</td>
+                  <td class="px-4 py-2 border">2009/01/12</td>
+                  <td class="px-4 py-2 border">$86,000</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Cedric Kelly</td>
+                  <td class="px-4 py-2 border">Senior Javascript Developer</td>
+                  <td class="px-4 py-2 border">Edinburgh</td>
+                  <td class="px-4 py-2 border">22</td>
+                  <td class="px-4 py-2 border">2012/03/29</td>
+                  <td class="px-4 py-2 border">$433,060</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Airi Satou</td>
+                  <td class="px-4 py-2 border">Accountant</td>
+                  <td class="px-4 py-2 border">Tokyo</td>
+                  <td class="px-4 py-2 border">33</td>
+                  <td class="px-4 py-2 border">2008/11/28</td>
+                  <td class="px-4 py-2 border">$162,700</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Brielle Williamson</td>
+                  <td class="px-4 py-2 border">Integration Specialist</td>
+                  <td class="px-4 py-2 border">New York</td>
+                  <td class="px-4 py-2 border">61</td>
+                  <td class="px-4 py-2 border">2012/12/02</td>
+                  <td class="px-4 py-2 border">$372,000</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Airi Satou</td>
+                  <td class="px-4 py-2 border">Accountant</td>
+                  <td class="px-4 py-2 border">Tokyo</td>
+                  <td class="px-4 py-2 border">33</td>
+                  <td class="px-4 py-2 border">2008/11/28</td>
+                  <td class="px-4 py-2 border">$162,700</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Brielle Williamson</td>
+                  <td class="px-4 py-2 border">Integration Specialist</td>
+                  <td class="px-4 py-2 border">New York</td>
+                  <td class="px-4 py-2 border">61</td>
+                  <td class="px-4 py-2 border">2012/12/02</td>
+                  <td class="px-4 py-2 border">$372,000</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Airi Satou</td>
+                  <td class="px-4 py-2 border">Accountant</td>
+                  <td class="px-4 py-2 border">Tokyo</td>
+                  <td class="px-4 py-2 border">33</td>
+                  <td class="px-4 py-2 border">2008/11/28</td>
+                  <td class="px-4 py-2 border">$162,700</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Brielle Williamson</td>
+                  <td class="px-4 py-2 border">Integration Specialist</td>
+                  <td class="px-4 py-2 border">New York</td>
+                  <td class="px-4 py-2 border">61</td>
+                  <td class="px-4 py-2 border">2012/12/02</td>
+                  <td class="px-4 py-2 border">$372,000</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Airi Satou</td>
+                  <td class="px-4 py-2 border">Accountant</td>
+                  <td class="px-4 py-2 border">Tokyo</td>
+                  <td class="px-4 py-2 border">33</td>
+                  <td class="px-4 py-2 border">2008/11/28</td>
+                  <td class="px-4 py-2 border">$162,700</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Brielle Williamson</td>
+                  <td class="px-4 py-2 border">Integration Specialist</td>
+                  <td class="px-4 py-2 border">New York</td>
+                  <td class="px-4 py-2 border">61</td>
+                  <td class="px-4 py-2 border">2012/12/02</td>
+                  <td class="px-4 py-2 border">$372,000</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Airi Satou</td>
+                  <td class="px-4 py-2 border">Accountant</td>
+                  <td class="px-4 py-2 border">Tokyo</td>
+                  <td class="px-4 py-2 border">33</td>
+                  <td class="px-4 py-2 border">2008/11/28</td>
+                  <td class="px-4 py-2 border">$162,700</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Brielle Williamson</td>
+                  <td class="px-4 py-2 border">Integration Specialist</td>
+                  <td class="px-4 py-2 border">New York</td>
+                  <td class="px-4 py-2 border">61</td>
+                  <td class="px-4 py-2 border">2012/12/02</td>
+                  <td class="px-4 py-2 border">$372,000</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Airi Satou</td>
+                  <td class="px-4 py-2 border">Accountant</td>
+                  <td class="px-4 py-2 border">Tokyo</td>
+                  <td class="px-4 py-2 border">33</td>
+                  <td class="px-4 py-2 border">2008/11/28</td>
+                  <td class="px-4 py-2 border">$162,700</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Brielle Williamson</td>
+                  <td class="px-4 py-2 border">Integration Specialist</td>
+                  <td class="px-4 py-2 border">New York</td>
+                  <td class="px-4 py-2 border">61</td>
+                  <td class="px-4 py-2 border">2012/12/02</td>
+                  <td class="px-4 py-2 border">$372,000</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Airi Satou</td>
+                  <td class="px-4 py-2 border">Accountant</td>
+                  <td class="px-4 py-2 border">Tokyo</td>
+                  <td class="px-4 py-2 border">33</td>
+                  <td class="px-4 py-2 border">2008/11/28</td>
+                  <td class="px-4 py-2 border">$162,700</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Brielle Williamson</td>
+                  <td class="px-4 py-2 border">Integration Specialist</td>
+                  <td class="px-4 py-2 border">New York</td>
+                  <td class="px-4 py-2 border">61</td>
+                  <td class="px-4 py-2 border">2012/12/02</td>
+                  <td class="px-4 py-2 border">$372,000</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Airi Satou</td>
+                  <td class="px-4 py-2 border">Accountant</td>
+                  <td class="px-4 py-2 border">Tokyo</td>
+                  <td class="px-4 py-2 border">33</td>
+                  <td class="px-4 py-2 border">2008/11/28</td>
+                  <td class="px-4 py-2 border">$162,700</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Brielle Williamson</td>
+                  <td class="px-4 py-2 border">Integration Specialist</td>
+                  <td class="px-4 py-2 border">New York</td>
+                  <td class="px-4 py-2 border">61</td>
+                  <td class="px-4 py-2 border">2012/12/02</td>
+                  <td class="px-4 py-2 border">$372,000</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Airi Satou</td>
+                  <td class="px-4 py-2 border">Accountant</td>
+                  <td class="px-4 py-2 border">Tokyo</td>
+                  <td class="px-4 py-2 border">33</td>
+                  <td class="px-4 py-2 border">2008/11/28</td>
+                  <td class="px-4 py-2 border">$162,700</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Brielle Williamson</td>
+                  <td class="px-4 py-2 border">Integration Specialist</td>
+                  <td class="px-4 py-2 border">New York</td>
+                  <td class="px-4 py-2 border">61</td>
+                  <td class="px-4 py-2 border">2012/12/02</td>
+                  <td class="px-4 py-2 border">$372,000</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Airi Satou</td>
+                  <td class="px-4 py-2 border">Accountant</td>
+                  <td class="px-4 py-2 border">Tokyo</td>
+                  <td class="px-4 py-2 border">33</td>
+                  <td class="px-4 py-2 border">2008/11/28</td>
+                  <td class="px-4 py-2 border">$162,700</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Brielle Williamson</td>
+                  <td class="px-4 py-2 border">Integration Specialist</td>
+                  <td class="px-4 py-2 border">New York</td>
+                  <td class="px-4 py-2 border">61</td>
+                  <td class="px-4 py-2 border">2012/12/02</td>
+                  <td class="px-4 py-2 border">$372,000</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Airi Satou</td>
+                  <td class="px-4 py-2 border">Accountant</td>
+                  <td class="px-4 py-2 border">Tokyo</td>
+                  <td class="px-4 py-2 border">33</td>
+                  <td class="px-4 py-2 border">2008/11/28</td>
+                  <td class="px-4 py-2 border">$162,700</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Brielle Williamson</td>
+                  <td class="px-4 py-2 border">Integration Specialist</td>
+                  <td class="px-4 py-2 border">New York</td>
+                  <td class="px-4 py-2 border">61</td>
+                  <td class="px-4 py-2 border">2012/12/02</td>
+                  <td class="px-4 py-2 border">$372,000</td>
+                </tr>
+
+
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+          </div>
+
         </div>
       </div>
     </div>
   </section>
   <!-- Kontak -->
-  <section class="overflow-hidden mb-12" id="contact">
-    <div class="py-12 px-4 sm:mx-32">
-      <div class="grid grid-col-span-12 gap-0 md:gap-6">
+  <section class="my-16 overflow-hidden" id="contact">
+    <div class="px-4 py-12 sm:mx-12 md:mx-12 lg:mx-32">
+      <div class="grid gap-0 grid-col-span-12 md:gap-6">
         <div class="col-span-12">
           <div class="text-center mb-14 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-            <h4 class="text-blue-700 uppercase text-2xl">Kontak Kami</h4>
+            <h4 class="text-2xl text-blue-700 uppercase">Kontak Kami</h4>
           </div>
           <div class="grid grid-cols-12 gap-0 sm:gap-8">
-            <div class="lg:col-span-5 col-span-12 mb-4 lg:mb-0 wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+            <div class="col-span-12 mb-4 lg:col-span-5 lg:mb-0 wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
               <div class="h-full md:shadow-[0_0_6px_0px_rgba(0,0,0,0.3)] p-4 md:px-12 md:py-16 rounded-3xl">
                 <form>
                   <div class="mb-3">
-                    <label for="name" class="mb-3 block  ">
+                    <label for="name" class="block mb-3 ">
                       Nama
                     </label>
                     <input type="text" name="name" id="name" placeholder="Masukan nama anda..." class=" transition-all delay-75 w-full rounded-md border border-[#e0e0e0] bg-white py-[6px] px-3 text-base text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                   </div>
                   <div class="mb-3">
-                    <label for="email" class="mb-3 block">
+                    <label for="email" class="block mb-3">
                       Email
                     </label>
                     <input type="email" name="email" id="email" placeholder="Masukan email anda..." class="transition-all delay-75 w-full rounded-md border border-[#e0e0e0] bg-white py-[6px] px-3 text-base text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                   </div>
                   <div class="mb-3">
-                    <label for="subject" class="mb-3 block">
+                    <label for="subject" class="block mb-3">
                       Subjek
                     </label>
                     <input type="subject" name="subject" id="subject" placeholder="Masukan Subjek..." class="transition-all delay-75 w-full rounded-md border border-[#e0e0e0] bg-white py-[6px] px-3 text-base text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                   </div>
                   <div class="mb-3">
-                    <label for="message" class="mb-3 block">
+                    <label for="message" class="block mb-3">
                       Pesan
                     </label>
                     <textarea class="transition-all delay-75 w-full rounded-md border border-[#e0e0e0] bg-white py-[6px] px-3 text-base font-normal text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" id="exampleCheck1" placeholder="Pesan yang anda..."></textarea>
                   </div>
-                  <button type="submit" class="bg-sky-600 text-[16px] text-white rounded-sm w-full p-2">Kirim</button>
+                  <button type="submit" class="bg-slate-600 text-[16px] text-white rounded-sm w-full p-2">Kirim</button>
                 </form>
               </div>
             </div>
-            <div class="lg:col-span-7 col-span-12 wow fadeInRight" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInRight;">
+            <div class="col-span-12 lg:col-span-7 wow fadeInRight" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInRight;">
               <div class="shadow-lg" id="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.675510832069!2d117.116894!3d-0.4847758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df67fc3e0b64cbf%3A0x58abfe8a1a69d679!2sPT%20Tanaya%20Artha%20Gautama!5e0!3m2!1sid!2sid!4v1711371907889!5m2!1sid!2sid" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
@@ -364,17 +668,17 @@
     </div>
   </section>
   <!-- !Footer -->
-  <footer class="bg-[#095998] text-white py-8">
+  <footer class="py-8 text-white bg-slate-600">
     <div class="md:mx-32">
       <div class="grid grid-cols-12">
         <div class="col-span-12 md:col-span-5">
           <div class="footer-logo">
-            <a href="#home" class="px-4 block">
+            <a href="#home" class="block px-4">
               <img src="https://qti.co.id/images/logo-putih.png" class="px-4">
             </a>
           </div>
         </div>
-        <div class="col-span-12 md:col-span-2 m-4 md:m-0">
+        <div class="col-span-12 m-4 md:col-span-2 md:m-0">
           <ul class="flex flex-col justify-center text-sm">
             <li class="mb-4"><a href="#home">Beranda</a></li>
             <li class="mb-4"><a href="#about-us">Tentang Kami</a></li>
@@ -383,7 +687,7 @@
             <li class="mb-4"><a href="#contact">Kontak</a></li>
           </ul>
         </div>
-        <div class="col-span-12 md:col-span-5 mx-4 md:m-0">
+        <div class="col-span-12 mx-4 md:col-span-5 md:m-0">
           <div class="flex flex-col space-y-4">
             <h4 class="text-2xl ">Kantor Pusat Perusahaan</h4>
             <ul class="flex flex-col space-y-4 text-sm">
@@ -435,8 +739,19 @@
   <script src="https://qti.co.id/vendor/swiper/js/swiper.min.js"></script>
   <script src="https://qti.co.id/vendor/smooth-scroll/smooth-scroll.min.js"></script>
   <script src="https://qti.co.id/vendor/wow/wow.min.js"></script>
-
-  <script src="https://qti.co.id/js/index.js"></script>
+  <!-- ! Data Table -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#example').DataTable({
+        // Add any customization options here
+        // scrollX:true
+      });
+    });
+  </script>
+  @vite('resources/js/index.js')
   <script>
     new WOW().init();
   </script>
