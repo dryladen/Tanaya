@@ -183,7 +183,7 @@
     <!-- <div class="absolute left-[-320px] top-[-70px]">
       <img src="https://qti.co.id/images/objek-left.png">
     </div> -->
-    <div class="py-16 my-16 sm:mx-12 md:mx-12 lg:mx-32">
+    <div class="py-16 my-16 sm:mx-12 md:mx-12 lg:mx-24">
       <div class="grid grid-cols-12">
         <div class="col-span-12 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
           <div class="text-center">
@@ -227,11 +227,13 @@
           </div> -->
           <div class="flex items-center justify-center py-12 ">
             <div class="grid gap-0 px-4 sm:grid-cols-2 md:grid-cols-6 md:gap-6">
+              <?php foreach ($clients as $client) :?>
               <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
-                <img src="{{asset('/client-img/abi-smd.png')}}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
+                <img src='{{asset("/client-img/$client->image")}}' alt="Flowers" class="w-full mx-0">
+                <p class="text-center"><?= $client->name ?></p>
               </div>
-              <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
+              <?php endforeach; ?>
+              <!-- <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
                 <img src="{{asset('/client-img/amethys.png')}}" alt="Flowers" class="w-2/3 mx-0">
                 <p class="text-center">PT. Anggana Jaya Pribadi</p>
               </div>
@@ -266,7 +268,7 @@
               <div class="flex flex-col items-center justify-center w-full mx-0 space-y-4">
                 <img src="{{asset('/client-img/berau-jaya-energy.png')}}" alt="Flowers" class="w-2/3 mx-0">
                 <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
+              </div> -->
             </div>
             <!-- <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div> -->
@@ -755,33 +757,6 @@
   <script>
     new WOW().init();
   </script>
-  <script>
-    function showTab(tabId) {
-      // Hide all tab content
-      const tabContents = document.querySelectorAll('.tabcontent');
-      tabContents.forEach((content) => {
-        content.classList.add('hidden');
-      });
-      // Show the selected tab content
-      const selectedTab = document.getElementById(tabId);
-      if (selectedTab) {
-        selectedTab.classList.remove('hidden');
-      }
-      // Remove the 'active' class from all tab buttons
-      const tabButtons = document.querySelectorAll('.tab-button');
-      tabButtons.forEach((button) => {
-        button.classList.remove('active');
-      });
-      // Add the 'active' class to the clicked tab button
-      const clickedButton = document.querySelector(`[onclick="showTab('${tabId}')"]`);
-      if (clickedButton) {
-        clickedButton.classList.add('active');
-      }
-    }
-    // Initialize the first tab
-    showTab('tab1');
-  </script>
-
 </body>
 
 </html>

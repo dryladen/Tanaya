@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ContentController;
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,14 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
 Route::get('/ori', function () {
     return view('original');
 });
 
-// Route::get(
-//     '/user/profile',
-//     [UserProfileController::class, 'show']
-// )->name('profile');
+Route::get('/',[IndexController::class, 'index'])->name('index');
+Route::get('/admin',[ClientController::class, 'index'])->name('dashboard');

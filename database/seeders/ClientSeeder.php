@@ -39,24 +39,6 @@ class ClientSeeder extends Seeder
                     'updated_at' => now()
                 ],
                 [
-                    'name' => 'PT. Bumi Alam Raya',
-                    'image' => 'pt-bumi-alam-raya.png',
-                    'created_at' => now(),
-                    'updated_at' => now()
-                ],
-                [
-                    'name' => 'PT. Kalimantan Sejahtera Mandiri',
-                    'image' => 'ksm.png',
-                    'created_at' => now(),
-                    'updated_at' => now()
-                ],
-                [
-                    'name' => 'CV. Anugrah Bara Insan',
-                    'image' => 'abi-smd.png',
-                    'created_at' => now(),
-                    'updated_at' => now()
-                ],
-                [
                     'name' => 'PT. Lati Tanjung Harapan',
                     'image' => 'lati-tanjung.png',
                     'created_at' => now(),
@@ -83,12 +65,6 @@ class ClientSeeder extends Seeder
                 [
                     'name' => 'PT. Berau Usaha Mandiri',
                     'image' => 'berau-usaha-mandiri.png',
-                    'created_at' => now(),
-                    'updated_at' => now()
-                ],
-                [
-                    'name' => 'CV. Anugrah Bara Insan',
-                    'image' => 'abi-smd.png',
                     'created_at' => now(),
                     'updated_at' => now()
                 ],
@@ -279,7 +255,7 @@ class ClientSeeder extends Seeder
                     'updated_at' => now()
                 ],
                 [
-                    'name' => 'PT. Energi Sinar Tambang (Kegiatan Terminal PT. Karunia Internasional Hidekel)',
+                    'name' => 'PT. Energi Sinar Tambang',
                     'image' => 'karunia-internasional.png',
                     'created_at' => now(),
                     'updated_at' => now()
