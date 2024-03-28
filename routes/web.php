@@ -19,3 +19,8 @@ Route::get('/', function () {
 Route::get('/ori', function () {
     return view('original');
 });
+
+// Route::get(
+//     '/user/profile',
+//     [UserProfileController::class, 'show']
+// )->name('profile');
