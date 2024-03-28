@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('project', function (Blueprint $table) {
             $table->id();
+            // add company, project, location, komodity, month, year
+            $table->string('company');
+            $table->string('project');
+            $table->string('location');
+            $table->string('komodity');
+            $table->string('month');
+            $table->string('year');
             $table->timestamps();
         });
     }
