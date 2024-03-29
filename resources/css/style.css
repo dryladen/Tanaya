@@ -77,9 +77,14 @@
   fill: #fff;
 }
 
-#example_filter, #example_length {
+.dt-length, .dt-search, .dt-info,.dt-paging {
   margin-bottom: 20px;
   font-size: 14px;
+  padding: 0 20px;
+}
+#dt-length-0 {
+  font-size: 14px;
+  width: 64px;
 }
 
 @media screen and (max-width: 992px) {

@@ -21,4 +21,5 @@ Route::get('/ori', function () {
 });
 
 Route::get('/',[IndexController::class, 'index'])->name('index');
-Route::get('/admin',[ClientController::class, 'index'])->name('dashboard');
+Route::get('admin',[ClientController::class, 'index'])->name('dashboard');
+Route::post('admin/store',[ClientController::class, 'store'])->name('store');
