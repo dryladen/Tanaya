@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/ori', function () {
-    return view('original');
-});
-
 Route::get('/',[IndexController::class, 'index'])->name('index');
-Route::get('admin',[ClientController::class, 'index'])->name('dashboard');
-Route::post('admin/store',[ClientController::class, 'store'])->name('store');
+Route::get('/client',[ClientController::class, 'index'])->name('client');
+Route::get('/client/search',[ClientController::class, 'search'])->name('client.search');
+Route::post('/client/store',[ClientController::class, 'store'])->name('client.store');
+Route::post('/client/edit/{id}',[ClientController::class, 'edit'])->name('client.edit');
+Route::delete('/client/{id}/delete',[ClientController::class, 'delete'])->name('client.delete');
+
