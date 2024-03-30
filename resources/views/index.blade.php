@@ -282,7 +282,7 @@
       <div class="grid grid-cols-12">
         <div class="col-span-12 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
           <div class="text-center">
-            <h4 class="my-12 text-2xl text-blue-700 uppercase">Riwayat Pekerjaan</h4>
+            <h4 class="my-12 text-2xl text-red-600 uppercase">Riwayat Pekerjaan</h4>
           </div>
           <div class="text-center">
             <h4 class="order-first text-slate-700 uppercase font-extrabold text-[120px]  sm:text-5xl">
@@ -576,7 +576,7 @@
       <div class="grid gap-0 grid-col-span-12 md:gap-6">
         <div class="col-span-12">
           <div class="text-center mb-14 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-            <h4 class="text-2xl text-blue-700 uppercase">Kontak Kami</h4>
+            <h4 class="text-2xl text-red-600 uppercase">Kontak Kami</h4>
           </div>
           <div class="grid grid-cols-12 gap-0 sm:gap-8">
             <div class="col-span-12 mb-4 lg:col-span-5 lg:mb-0 wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
@@ -676,7 +676,7 @@
         <div class="col-span-12 md:col-span-5">
           <div class="footer-logo">
             <a href="#home" class="block px-4">
-              <img src="https://qti.co.id/images/logo-putih.png" class="px-4">
+              <h4 class="text-4xl font-bold">TAMA</h4>
             </a>
           </div>
         </div>

@@ -27,7 +27,7 @@
                             </path>
                         </svg>
                     </button>
-                    <a href="https://flowbite.com" class="flex ms-2 md:me-24">
+                    <a href="{{ url('dashboard') }}" class="flex ms-2 md:me-24">
                         <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" /> -->
                         <span
                             class="self-center text-xl text-black font-extrabold sm:text-4xl whitespace-nowrap dark:text-white">TAMA</span>

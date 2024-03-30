@@ -7,11 +7,18 @@ use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
-    function index()
+    function index(Request $request)
     {
-        $data = array(
-            "clients" => Client::paginate(5)
-        );
+        $filter = $request->query('filter');
+        if ($filter) {
+            $data = array(
+                "clients" => Client::where('name', 'like', '%' . $filter . '%')->paginate(5)
+            );
+        } else {
+            $data = array(
+                "clients" => Client::paginate(5)
+            );
+        }
         confirmDelete("Hapus Klien", "Apa anda yakin ingin menghapus klien ini?");
         return view('admin.dashboard', $data);
     }
