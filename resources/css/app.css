@@ -2,18 +2,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@property --num-transactions {
-  syntax: "<integer>";
-  initial-value: 557;
-  inherits: false;
-}
-
-@keyframes counter {
-  from {
-    --num-transactions: 30;
-  }
-  to {
-    --num-transactions: 557;
-  }
-}

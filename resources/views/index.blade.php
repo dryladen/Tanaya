@@ -130,9 +130,6 @@
         </div>
     </section>
     <section class="mb-16 overflow-x-hidden" id="about-us">
-        <!-- <div class="absolute left-[-325px] hidden md:block ">
-      <img src="https://qti.co.id/images/objek-left.png">
-    </div> -->
         <div class="py-16 mx-4 my-16 md:mx-32">
             <div class="grid grid-cols-12 gap-0 md:gap-8">
                 <div class="grid col-span-12 md:col-span-4 place-items-center wow fadeInLeft" data-wow-delay="0.3s"
@@ -161,9 +158,6 @@
         </div>
     </section>
     <section class="px-4 py-12 mb-12 overflow-x-hidden md:px-32" id="our-service">
-        <!-- <div class="absolute right-[-180px]">
-      <img src="https://qti.co.id/images/objek-right.png">
-    </div> -->
         <div class="py-16">
             <div class="grid grid-cols-12">
                 <div class="col-span-12">
@@ -233,9 +227,6 @@
         </div>
     </section>
     <section class="relative mb-16 overflow-hidden" id="our-client">
-        <!-- <div class="absolute left-[-320px] top-[-70px]">
-      <img src="https://qti.co.id/images/objek-left.png">
-    </div> -->
         <div class="py-16 my-16 sm:mx-12 md:mx-12 lg:mx-24">
             <div class="grid grid-cols-12">
                 <div class="col-span-12 wow fadeInUp" data-wow-delay="0.3s"
@@ -243,111 +234,32 @@
                     <div class="text-center">
                         <h4 class="mb-2 text-2xl text-blue-700 uppercase">Bagian dari Klien Kami</h4>
                     </div>
-                    <!-- <div class="flex items-center py-12 swiper-client">
-            <div class="flex items-end space-x-2 swiper-wrapper">
-              <div class="flex flex-col items-center justify-end w-24 h-full mx-0 space-y-4 swiper-slide"><img src="{{ asset('/client-img/abi-smd.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-end w-24 h-full mx-0 space-y-4 swiper-slide"><img src="{{ asset('/client-img/amethys.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-end w-24 h-full mx-0 space-y-4 swiper-slide"><img src="{{ asset('/client-img/anggana-coal.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-end w-24 h-full mx-0 space-y-4 swiper-slide"><img src="{{ asset('/client-img/anggaraksa.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-end w-24 h-full mx-0 space-y-4 swiper-slide"><img src="{{ asset('/client-img/anugrah-pratama.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-end w-24 h-full mx-0 space-y-4 swiper-slide"><img src="{{ asset('/client-img/aragon-tambang.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-end w-24 h-full mx-0 space-y-4 swiper-slide"><img src="{{ asset('/client-img/arwana-prima.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-center w-24 mx-0 space-y-4 swiper-slide"><img src="{{ asset('/client-img/batuah-energi.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-center w-24 mx-0 space-y-4 swiper-slide"><img src="{{ asset('/client-img/berau-usaha-mandiri.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-center w-24 mx-0 space-y-4 swiper-slide"><img src="{{ asset('/client-img/berau-jaya-energy.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-center w-24 mx-0 space-y-4 swiper-slide">
-              </div>
-            </div>
-          </div> -->
                     <div class="flex items-center justify-center py-12 ">
-                        <div class="grid gap-0 px-4 sm:grid-cols-2 md:grid-cols-6 md:gap-6">
+                        <div class="grid gap-0 px-4 grid-cols-2 md:grid-cols-5 lg:grid-cols-7 md:gap-6">
                             <?php foreach ($clients as $client) :?>
                             <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
                                 <img src='{{ asset("/client-img/$client->image") }}' alt="Flowers"
-                                    class="w-full mx-0">
+                                    class="w-1/2 lg:w-full mx-0">
                                 <p class="text-center"><?= $client->name ?></p>
                             </div>
                             <?php endforeach; ?>
-                            <!-- <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
-                <img src="{{ asset('/client-img/amethys.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
-                <img src="{{ asset('/client-img/anggana-coal.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
-                <img src="{{ asset('/client-img/anggaraksa.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
-                <img src="{{ asset('/client-img/anugrah-pratama.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
-                <img src="{{ asset('/client-img/aragon-tambang.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
-                <img src="{{ asset('/client-img/arwana-prima.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-center w-full mx-0 space-y-4">
-                <img src="{{ asset('/client-img/batuah-energi.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-center w-full mx-0 space-y-4">
-                <img src="{{ asset('/client-img/berau-usaha-mandiri.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div>
-              <div class="flex flex-col items-center justify-center w-full mx-0 space-y-4">
-                <img src="{{ asset('/client-img/berau-jaya-energy.png') }}" alt="Flowers" class="w-2/3 mx-0">
-                <p class="text-center">PT. Anggana Jaya Pribadi</p>
-              </div> -->
                         </div>
-                        <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <section class="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5 antialiased mt-14">
         <div class="text-center">
             <h4 class="my-12 text-2xl text-red-600 uppercase">Riwayat Pekerjaan</h4>
         </div>
         <div class="text-center">
-            <h4 class="order-first text-slate-700 uppercase font-extrabold text-[120px]  sm:text-5xl">
-                <span
-                    class="animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-transactions)] before:content-[counter(num)]"
-                    data-wow-delay="0.3s"
-                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"> <span
-                        class="sr-only">{{ $projects->count() }}</span></span>
+            <h4 class="order-first text-slate-700 uppercase font-extrabold text-7xl  sm:text-9xl">
+                {{ $projects->total() }}
             </h4>
-            <span class="text-lg font-semibold text-slate-400">Number Of Project</span>
+            <span class="text-lg font-semibold text-slate-400">Total Projek</span>
         </div>
-        <div class="mx-32 max-w-screen-xl py-4 ">
+        <div class="mx-4 md:mx-12 lg:mx-32 max-w-screen-xl py-4 ">
             <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
                 <div
                     class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
@@ -370,7 +282,7 @@
                             </div>
                         </form>
                     </div>
-                    
+
                 </div>
                 <div class="overflow-x-auto">
                     <table id="mytable" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -437,7 +349,7 @@
                                         </label>
                                         <input type="text" name="name" id="name"
                                             placeholder="Masukan nama anda..."
-                                            class=" transition-all delay-75 w-full rounded-md border border-[#e0e0e0] bg-white py-[6px] px-3 text-base text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                            class="py-3 transition-all delay-75 w-full rounded-md border border-[#e0e0e0] bg-white px-3 text-base text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                                     </div>
                                     <div class="mb-3">
                                         <label for="email" class="block mb-3">
@@ -445,7 +357,7 @@
                                         </label>
                                         <input type="email" name="email" id="email"
                                             placeholder="Masukan email anda..."
-                                            class="transition-all delay-75 w-full rounded-md border border-[#e0e0e0] bg-white py-[6px] px-3 text-base text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                            class="py-3 transition-all delay-75 w-full rounded-md border border-[#e0e0e0] bg-white px-3 text-base text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                                     </div>
                                     <div class="mb-3">
                                         <label for="subject" class="block mb-3">
@@ -453,15 +365,15 @@
                                         </label>
                                         <input type="subject" name="subject" id="subject"
                                             placeholder="Masukan Subjek..."
-                                            class="transition-all delay-75 w-full rounded-md border border-[#e0e0e0] bg-white py-[6px] px-3 text-base text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                            class="py-3 transition-all delay-75 w-full rounded-md border border-[#e0e0e0] bg-white px-3 text-base text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                                     </div>
                                     <div class="mb-3">
                                         <label for="message" class="block mb-3">
                                             Pesan
                                         </label>
                                         <textarea
-                                            class="transition-all delay-75 w-full rounded-md border border-[#e0e0e0] bg-white py-[6px] px-3 text-base font-normal text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                            id="exampleCheck1" placeholder="Pesan yang anda..."></textarea>
+                                            class="py-3 transition-all delay-75 w-full rounded-md border border-[#e0e0e0] bg-white px-3 text-base font-normal text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                            id="exampleCheck1" placeholder="Pesan anda..."></textarea>
                                     </div>
                                     <button type="submit"
                                         class="bg-slate-600 text-[16px] text-white rounded-sm w-full p-2">Kirim</button>
