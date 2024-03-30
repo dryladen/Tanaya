@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5 antialiased mt-14">
-        <div class="mx-auto max-w-screen-xl p-4 ">
+        <div class="mx-auto max-w-screen-xl py-4 ">
             <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
                 <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
                     <div class="w-full md:w-1/2">
@@ -44,7 +44,7 @@
                             <tr>
                                 <th class="w-6 px-4 py-4">No</th>
                                 <th scope="col" class="px-4 py-4 text-center">Gambar</th>
-                                <th scope="col" class="px-4 py-4">Nama Perusahaan</th>
+                                <th scope="col" class="px-4 py-4">@sortablelink('name','Nama Perusahaan')</th>
                                 <th scope="col" class="px-4 py-4">
                                     <span class="sr-only">Actions</span>
                                 </th>

@@ -6,13 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ isset($title) ? $title : 'Dashboard' }}</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/style.css'])
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/style.css','public/fontawesome/css/all.css'])
 </head>
-
 <body class="font-popp">
     <nav
-        class="fixed top-0 z-50 h-[70px] flex items-center w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        class="fixed top-0 z-40 h-[70px] flex items-center w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <div class="px-3 py-3 lg:px-5 lg:pl-3 w-full">
             <div class="flex items-center justify-between w-full">
                 <div class="flex items-center justify-start rtl:justify-end">
@@ -61,7 +59,6 @@
                                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                         role="menuitem">Profile</a>
                                 </li>
-
                                 <li>
                                     <a href="{{ url('signOut') }}"
                                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
@@ -75,14 +72,14 @@
         </div>
     </nav>
     <aside id="logo-sidebar"
-        class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        class="fixed top-0 left-0 z-30 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
         aria-label="Sidebar">
         <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
             <ul class="space-y-2 font-medium">
                 <li>
                     <a href="{{ url('dashboard') }}"
                         class="{{ request()->routeIs('dashboard') ? 'bg-slate-700 text-white' : '' }} flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="{{ request()->routeIs('dashboard') ? 'text-white' : '' }} w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        <svg class="{{ request()->routeIs('dashboard') ? 'text-white group-hover:text-white' : '' }} w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                             viewBox="0 0 22 21">
                             <path
@@ -94,9 +91,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url('clients') }}"
-                        class="{{ request()->routeIs('client') ? 'bg-slate-700 text-white' : '' }} flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {{ Request::is('client') ? 'bg-gray-700 text-white hover:bg-gray-500' : '' }} group">
-                        <svg class="{{ request()->routeIs('client') ? 'text-white' : '' }} flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400  dark:group-hover:text-white"
+                    <a href="{{ url('client') }}"
+                        class="{{ request()->routeIs('client') ? 'bg-slate-700 hover:bg-slate-800 text-white' : '' }} flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {{ Request::is('client') ? 'bg-gray-700 text-white hover:bg-gray-500' : '' }} group">
+                        <svg class="{{ request()->routeIs('client') ? 'text-white group-hover:text-white' : '' }} flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900  dark:group-hover:text-white"
                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -107,8 +104,8 @@
                 </li>
                 <li>
                     <a href="{{ url('project') }}"
-                        class="{{ request()->routeIs('project') ? 'bg-slate-700 text-white' : '' }} flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="{{ request()->routeIs('project') ? 'text-white' : '' }} flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        class="{{ request()->routeIs('project') ? 'bg-slate-700 hover:bg-slate-800 text-white ' : '' }} flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="{{ request()->routeIs('project') ? 'text-white group-hover:text-white' : '' }} flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             fill="currentColor" viewBox="0 0 24 24">
                             <path fill-rule="evenodd"
@@ -120,8 +117,8 @@
                 </li>
                 <li>
                     <a href="{{ url('users') }}"
-                        class="{{ request()->routeIs('users') ? 'bg-slate-700 text-white' : '' }} flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="{{ request()->routeIs('users') ? 'text-white' : '' }} flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        class="{{ request()->routeIs('users') ? 'bg-slate-700 hover:bg-slate-800 text-white' : '' }} flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="{{ request()->routeIs('users') ? 'text-white group-hover:text-white' : '' }} flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                             viewBox="0 0 20 18">
                             <path

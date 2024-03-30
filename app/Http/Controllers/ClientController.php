@@ -13,25 +13,18 @@ class ClientController extends Controller
         if ($filter) {
             $data = array(
                 "title" => "Klien",
-                "clients" => Client::where('name', 'like', '%' . $filter . '%')->paginate(5)
+                "clients" => Client::sortable()->where('name', 'like', '%' . $filter . '%')->paginate(5)
             );
         } else {
             $data = array(
                 "title" => "Klien",
-                "clients" => Client::paginate(5)
+                "clients" => Client::sortable('name')->paginate(5)
             );
         }
         confirmDelete("Hapus Klien", "Apa anda yakin ingin menghapus klien ini?");
         return view('admin.client', $data);
     }
-    function search(Request $request)
-    {
-        $data = array(
-            "clients" => Client::where('name', 'like', '%' . $request->search . '%')->paginate(5)
-        );
-        confirmDelete("Hapus Klien", "Apa anda yakin ingin menghapus klien ini?");
-        return view('admin.client', $data);
-    }
+    
     function store(Request $request)
     {
         // validate request name and image
