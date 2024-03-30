@@ -1,5 +1,4 @@
 @extends('admin.layouts.main')
-
 @section('content')
     <section class="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5 antialiased mt-14">
         <div class="mx-auto max-w-screen-xl p-4 ">
@@ -51,18 +50,18 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @if ($clients->count() == 0)
-                            <tr>
-                                <td colspan="4">Data klien belum ada, silahkan tambahkan klien.</td>
-                            </tr>
+                            @if ($projects->count() == 0)
+                                <tr>
+                                    <td colspan="4">Data klien belum ada, silahkan tambahkan klien.</td>
+                                </tr>
                             @endif
                             @php
                                 $no = 0;
                             @endphp
-                            @foreach ($clients as $key => $item)
+                            @foreach ($projects as $key => $item)
                                 <tr class="border-b dark:border-gray-700">
                                     <td scope="row" class="px-4 py-4 text-center">
-                                        {{ $clients->firstItem() + $key  }}
+                                        {{ $projects->firstItem() + $key }}
                                     </td>
                                     <td class="py-3 flex justify-center">
                                         <img class="w-20" src="{{ asset('client-img/' . $item->image) }}"
@@ -113,7 +112,9 @@
                                                     </button>
                                                 </li>
                                                 <li>
-                                                    <a href="{{ route('client.delete', $item->id) }}" data-confirm-delete="true" class="flex w-full items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 text-red-500 dark:hover:text-red-400">
+                                                    <a href="{{ route('client.delete', $item->id) }}"
+                                                        data-confirm-delete="true"
+                                                        class="flex w-full items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 text-red-500 dark:hover:text-red-400">
                                                         <svg class="w-4 h-4 mr-2" viewbox="0 0 14 15" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -130,7 +131,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    <div class="p-4">{!! $clients->appends(Request::except('page'))->render() !!} </div>
+                    <div class="p-4">{!! $projects->appends(Request::except('page'))->render() !!} </div>
                 </div>
             </div>
         </div>
@@ -187,7 +188,7 @@
         </div>
     </div>
     <!-- Update modal -->
-    @foreach ($clients as $item)
+    @foreach ($projects as $item)
         <div id="updateProductModal{{ $item->id }}" tabindex="-1" aria-hidden="true"
             class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
             <div class="relative p-4 w-full max-w-2xl max-h-full">
@@ -214,7 +215,8 @@
                             <div>
                                 <label for="name"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama</label>
-                                <input type="text" name="name" id="name" value="{{ $item->name }}" required
+                                <input type="text" name="name" id="name" value="{{ $item->name }}"
+                                    required
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500"
                                     placeholder="{{ $item->name }}">
                             </div>
@@ -238,7 +240,7 @@
         </div>
     @endforeach
     <!-- Read modal -->
-    @foreach ($clients as $item)
+    @foreach ($projects as $item)
         <div id="readProductModal{{ $item->id }}" tabindex="-1" aria-hidden="true"
             class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
             <div class="relative p-4 w-full max-w-xl max-h-full">
@@ -272,7 +274,7 @@
         </div>
     @endforeach
     <!-- Delete modal -->
-    @foreach ($clients as $item)
+    @foreach ($projects as $item)
         <div id="deleteModal{{ $item->id }}" tabindex="-1" aria-hidden="true"
             class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
             <div class="relative p-4 w-full max-w-md max-h-full">
@@ -309,27 +311,4 @@
             </div>
         </div>
     @endforeach
-@endsection
-
-@section('scripts')
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#mytable').DataTable({
-                responsive: {
-                    details: {
-                        display: DataTable.Responsive.display.modal({
-                            header: function(row) {
-                                var data = row.data();
-                                return 'Details for ' + data[0] + ' ' + data[1];
-                            }
-                        }),
-                        renderer: DataTable.Responsive.renderer.tableAll()
-                    }
-                }
-            });
-        });
-    </script>
 @endsection

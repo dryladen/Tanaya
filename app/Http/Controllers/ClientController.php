@@ -12,15 +12,17 @@ class ClientController extends Controller
         $filter = $request->query('filter');
         if ($filter) {
             $data = array(
+                "title" => "Klien",
                 "clients" => Client::where('name', 'like', '%' . $filter . '%')->paginate(5)
             );
         } else {
             $data = array(
+                "title" => "Klien",
                 "clients" => Client::paginate(5)
             );
         }
         confirmDelete("Hapus Klien", "Apa anda yakin ingin menghapus klien ini?");
-        return view('admin.dashboard', $data);
+        return view('admin.client', $data);
     }
     function search(Request $request)
     {
@@ -28,7 +30,7 @@ class ClientController extends Controller
             "clients" => Client::where('name', 'like', '%' . $request->search . '%')->paginate(5)
         );
         confirmDelete("Hapus Klien", "Apa anda yakin ingin menghapus klien ini?");
-        return view('admin.dashboard', $data);
+        return view('admin.client', $data);
     }
     function store(Request $request)
     {
