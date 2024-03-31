@@ -6,8 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ isset($title) ? $title : 'Dashboard' }}</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/style.css','public/fontawesome/css/all.css'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/style.css', 'public/fontawesome/css/all.css'])
 </head>
+
 <body class="font-popp">
     <nav
         class="fixed top-0 z-40 h-[70px] flex items-center w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
@@ -30,43 +31,6 @@
                         <span
                             class="self-center text-xl text-black font-extrabold sm:text-4xl whitespace-nowrap dark:text-white">TAMA</span>
                     </a>
-                </div>
-                <div class="flex items-center">
-                    <div class="flex items-center ms-3">
-                        <div>
-                            <button type="button"
-                                class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
-                                aria-expanded="false" data-dropdown-toggle="dropdown-user">
-                                <span class="sr-only">Open user menu</span>
-                                <img class="w-8 h-8 rounded-full"
-                                    src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-                                    alt="user photo">
-                            </button>
-                        </div>
-                        <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
-                            id="dropdown-user">
-                            <div class="px-4 py-3" role="none">
-                                <p class="text-sm text-gray-900 dark:text-white" role="none">
-                                    Neil Sims
-                                </p>
-                                <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-                                    neil.sims@flowbite.com
-                                </p>
-                            </div>
-                            <ul class="py-1" role="none">
-                                <li>
-                                    <a href="{{ url('profile') }}"
-                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        role="menuitem">Profile</a>
-                                </li>
-                                <li>
-                                    <a href="{{ url('signOut') }}"
-                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                        role="menuitem">Sign out</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -127,6 +91,18 @@
                         <span class="flex-1 ms-3 whitespace-nowrap">Users</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ url('logout') }}"
+                        class="{{ request()->routeIs('users') ? 'bg-slate-700 hover:bg-slate-800 text-white' : '' }} flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+                          </svg>
+                          
+                        <span class="flex-1 ms-3 whitespace-nowrap">Log Out</span>
+                    </a>
+                </li>
+                
+
             </ul>
         </div>
     </aside>

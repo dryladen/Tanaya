@@ -31,14 +31,15 @@ class IndexController extends Controller
             'name.required' => 'Masukan Username anda',
             'password.required' => 'Password wajib diisi',
         ]);
-        $infoLogin = [
-            'name' => $request->email,
-            'password' => $request->password,
-        ];
-        if (Auth::attempt($infoLogin)) {
+        if (Auth::attempt($request->only('name', 'password'))) {
             return redirect()->route('client')->with('success', 'Login Berhasil');
         } else {
-            return redirect('')->withErrors('Email dan Password tidak terdaftar')->withInput();
+            return redirect()->back()->with('error', 'Username atau password salah');
         }
+    }
+    function logout()
+    {
+        Auth::logout();
+        return redirect()->route('login');
     }
 }
