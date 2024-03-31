@@ -4,10 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TAMA</title>
-    @vite('resources/css/app.css')
-    @vite('resources/css/style.css')
     <link rel="stylesheet" href="https://qti.co.id/vendor/swiper/css/swiper.css">
-    <link rel="stylesheet" href="https://qti.co.id/vendor/animate.css/animate.min.css">
+    @vite(['resources/css/app.css','resources/css/style.css'])
 </head>
 
 <body class="relative overflow-x-hidden font-popp">
@@ -255,48 +253,23 @@
         </div>
         <div class="text-center">
             <h4 class="order-first text-slate-700 uppercase font-extrabold text-7xl  sm:text-9xl">
-                {{ $projects->total() }}
+                {{ $projects->count() }}
             </h4>
             <span class="text-lg font-semibold text-slate-400">Total Projek</span>
         </div>
         <div class="mx-4 md:mx-12 lg:mx-32 max-w-screen-xl py-4 ">
             <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
-                <div
-                    class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
-                    <div class="w-full md:w-1/2">
-                        <form class="flex items-center" method="GET">
-                            @csrf
-                            <label for="simple-search" class="sr-only">Search</label>
-                            <div class="relative w-full">
-                                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                                        fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </div>
-                                <input type="text" id="simple-search"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    placeholder="Cari data..." name="filter">
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
                 <div class="overflow-x-auto">
-                    <table id="mytable" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <table id="project-table" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr class="">
                                 <th class="w-6 px-4 py-4">No</th>
-                                <th scope="col" class="ps-4">
-                                    @sortablelink('task', 'Jenis Pekerjaan')
-                                </th>
-                                <th scope="col" class="ps-4">@sortablelink('company', 'Nama Perusahaan')</th>
-                                <th scope="col" class="ps-4">@sortablelink('location', 'Daerah')</th>
-                                <th scope="col" class="ps-4">@sortablelink('comodity', 'Komoditas')</th>
-                                <th scope="col" class="text-center">@sortablelink('month', 'Bulan')</th>
-                                <th scope="col" class="text-center">@sortablelink('years', 'Tahun')</th>
+                                <th scope="col" class="ps-4">Jenis Pekerjaan</th>
+                                <th scope="col" class="ps-4"> Nama Perusahaan</th>
+                                <th scope="col" class="ps-4"> Daerah</th>
+                                <th scope="col" class="ps-4"> Komoditas</th>
+                                <th scope="col" class="text-center"> Bulan</th>
+                                <th scope="col" class="text-center"> Tahun</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -311,7 +284,7 @@
                             @foreach ($projects as $key => $item)
                                 <tr class="border-b dark:border-gray-700">
                                     <td scope="row" class="px-4 py-4 text-center">
-                                        {{ $projects->firstItem() + $key }}
+                                        {{ $key + 1}}
                                     </td>
                                     <td class="px-4 py-3">{{ $item->task }}</td>
                                     <td class="px-4 py-3">{{ $item->company }}</td>
@@ -323,7 +296,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    <div class="p-4">{!! $projects->appends(Request::except('page'))->render() !!} </div>
+                    {{-- <div class="p-4">{!! $projects->appends(Request::except('page'))->render() !!} </div> --}}
                 </div>
             </div>
         </div>
@@ -552,15 +525,23 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    @vite('resources/js/index.js')
     <script>
         $(document).ready(function() {
-            $('#example').DataTable({
-                // Add any customization options here
-                // scrollX:true
+            $('#project-table').DataTable({
+                // "serverSide": true,
+                // "ajax": {
+                //     url: "", 
+                //     method: "get"
+                // },
+                // "columnDefs" : [{
+                //     'targets': [4], 
+                //     'orderable': false
+                // }],
             });
         });
     </script>
-    @vite('resources/js/index.js')
+
     <script>
         new WOW().init();
     </script>

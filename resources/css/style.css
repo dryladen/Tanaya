@@ -77,14 +77,17 @@
   fill: #fff;
 }
 
-.dt-length, .dt-search, .dt-info,.dt-paging {
+#project-table_length, #project-table_filter {
   margin-bottom: 20px;
-  font-size: 14px;
-  padding: 0 20px;
 }
-#dt-length-0 {
-  font-size: 14px;
+
+#project-table_length select {
   width: 64px;
+}
+
+div#project-table_wrapper {
+  padding: 20px;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 992px) {
