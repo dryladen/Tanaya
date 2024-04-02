@@ -4,19 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TAMA</title>
-    <link rel="stylesheet" href="https://qti.co.id/vendor/swiper/css/swiper.css">
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/style.css'])
+    <link rel="stylesheet" href="https://qti.co.id/vendor/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://qti.co.id/vendor/animate.css/animate.min.css">
 </head>
 
-<body class=" overflow-x-hidden font-popp">
+<body class=" font-popp">
     <!-- ! Navbar -->
-    <nav class="bg-white dark:bg-gray-900 fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-        <div class="w-full flex flex-wrap items-center justify-between mx-auto lg:mx-32 p-4">
+    <nav
+        class="bg-white dark:bg-gray-900 fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <div class=" flex flex-wrap items-center justify-between  lg:mx-32 p-4 lg:py-4 lg:px-0">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <span class="text-4xl font-bold">TAMA</span>
             </a>
-            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <button data-collapse-toggle="navbar-sticky" type="button"
+            <div class="flex space-x-3 md:space-x-0 rtl:space-x-reverse ">
+                <button data-collapse-toggle="navbar-sticky" type="button" id="navbar-toggle"
                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-sticky" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
@@ -27,9 +29,9 @@
                     </svg>
                 </button>
             </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky" >
                 <ul
-                    class="flex flex-col p-4 md:p-0 mt-4 font-medium text-gray-600 border border-gray-100 rounded-lg bg-gray-50 md:space-x-2 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    class="flex flex-col justify-end p-4 md:p-0 mt-4 text-sm text-gray-600 border border-gray-100 rounded-lg bg-gray-50 md:space-x-2 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
                         <a class="block px-0 py-3 md:p-2" href="#home">Beranda</a>
                     </li>
@@ -349,7 +351,7 @@
     </section>
     <!-- Kontak -->
     <section class="my-16 overflow-hidden" id="contact">
-        <div class="px-4 py-12 sm:mx-12 md:mx-12 lg:mx-32">
+        <div class="px-4 py-24 sm:mx-12 md:mx-12 lg:mx-32">
             <div class="grid gap-0 grid-col-span-12 md:gap-6">
                 <div class="col-span-12">
                     <div class="text-center mb-14 wow fadeInUp" data-wow-delay="0.3s"
@@ -359,8 +361,7 @@
                     <div class="grid grid-cols-12 gap-0 sm:gap-8">
                         <div class="col-span-12 mb-4 lg:col-span-5 lg:mb-0 wow fadeInLeft" data-wow-delay="0.5s"
                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-                            <div
-                                class="h-full md:shadow-[0_0_6px_0px_rgba(0,0,0,0.3)] p-4 md:px-12 md:py-16 rounded-3xl">
+                            <div class="h-full md:shadow-[0_0_6px_0px_rgba(0,0,0,0.3)] p-4 md:p-8 rounded-3xl">
                                 <form>
                                     <div class="mb-3">
                                         <label for="name" class="block mb-3 ">
@@ -390,9 +391,9 @@
                                         <label for="message" class="block mb-3">
                                             Pesan
                                         </label>
-                                        <textarea
+                                        <textarea name="message" id="message"
                                             class="py-3 transition-all delay-75 w-full rounded-md border border-[#e0e0e0] bg-white px-3 text-base font-normal text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                            id="exampleCheck1" placeholder="Pesan anda..."></textarea>
+                                            placeholder="Pesan anda..."></textarea>
                                     </div>
                                     <button type="submit"
                                         class="bg-slate-600 text-[16px] text-white rounded-sm w-full p-2">Kirim</button>

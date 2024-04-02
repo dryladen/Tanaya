@@ -1,11 +1,11 @@
 window.onresize = displayHome;
 window.onload = displayHome;
-
 function displayHome() {
   $(window).scroll(function () {
     if ($(this).scrollTop() > 0) {
       $('#menu-nav').addClass('bg-light shadow-sm');
-      // $('.nav-custom a').removeClass('text-light').addClass('text-dark');
+      $('#navbar-toggle').attr('aria-expanded',false);
+      $('#navbar-sticky').addClass('hidden');
       // $('.navbar-toggler').removeClass('toggler-custom');
     } else {
       // $('#menu-nav').removeClass('bg-light shadow-sm');
