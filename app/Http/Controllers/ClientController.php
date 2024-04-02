@@ -18,7 +18,7 @@ class ClientController extends Controller
         } else {
             $data = array(
                 "title" => "Klien",
-                "clients" => Client::sortable('name')->paginate(5)
+                "clients" => Client::sortable()->paginate(5)
             );
         }
         confirmDelete("Hapus Klien", "Apa anda yakin ingin menghapus klien ini?");
@@ -54,7 +54,7 @@ class ClientController extends Controller
             'name' => $request->name,
             'image' => $image_name
         ]);
-        return redirect('client')->with('success', 'Data berhasil ditambahkan');
+        return redirect()->route('client')->with('success', 'Data berhasil ditambahkan');
     }
     function edit(Request $request, $id)
     {
@@ -89,7 +89,7 @@ class ClientController extends Controller
             'name' => $request->name,
             'image' => $image_name
         ]);
-        return redirect('client')->with('success', 'Data berhasil diubah');
+        return redirect()->route('client')->with('success', 'Data berhasil diubah');
     }
     function delete($id)
     {
@@ -101,6 +101,6 @@ class ClientController extends Controller
         if ($client->image != 'default.jpg') {
             unlink(public_path('client-img/' . $client->image));
         }
-        return redirect('client')->with('success', 'Data berhasil dihapus');
+        return redirect()->route('client')->with('success', 'Data berhasil dihapus');
     }
 }

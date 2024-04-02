@@ -202,7 +202,7 @@
                 <div class="col-span-12 ">
                     <div class="text-center wow fadeInDown" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
-                        <h4 class="mb-2 text-2xl text-blue-700 uppercase">Bagian dari Klien Kami</h4>
+                        <h4 class="mb-2 text-2xl text-red-600 uppercase">Bagian dari Klien Kami</h4>
                     </div>
                     <div class="flex items-center justify-center py-12 wow fadeInUp" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">

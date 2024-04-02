@@ -57,7 +57,7 @@ class ProjectController extends Controller
       'month' => $request->month,
       'years' => $request->years
     ]);
-    return redirect('project')->with('success', 'Data berhasil ditambahkan');
+    return redirect()->route('project')->with('success', 'Data berhasil ditambahkan');
   }
   function edit(Request $request, $id)
   {
@@ -77,9 +77,6 @@ class ProjectController extends Controller
       'month.required' => 'Bulan wajib di isi',
       'years.required' => 'Tahun wajib di isi'
     ]);
-    // get project by id
-    $project = Project::find($id);
-    
     // update project
     Project::where('id', $id)->update([
       'task' => $request->task,
@@ -89,7 +86,7 @@ class ProjectController extends Controller
       'month' => $request->month,
       'years' => $request->years
     ]);
-    return redirect('project')->with('success', 'Data berhasil diubah');
+    return redirect()->route('project')->with('success', 'Data berhasil diubah');
   }
   function delete($id)
   {
@@ -97,6 +94,6 @@ class ProjectController extends Controller
     $project = Project::find($id);
     // delete project
     $project->delete();
-    return redirect('project')->with('success', 'Data berhasil dihapus');
+    return redirect()->route('project')->with('success', 'Data berhasil dihapus');
   }
 }
