@@ -24,7 +24,7 @@
                         class="text-xl font-bold leading-tight tracking-tight text-center text-gray-900 md:text-2xl dark:text-white">
                         Login Admin
                     </h1>
-                    <form action="{{ url('login') }}" method="POST" class="space-y-4 md:space-y-6" action="#">
+                    <form action="{{ url('admin') }}" method="POST" class="space-y-4 md:space-y-6" action="#">
                         @csrf
                         <div>
                             <label for="name"
@@ -44,7 +44,7 @@
                             class="w-full text-white bg-sky-600 hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
                             Masuk
                         </button>
-                        <p class="text-gray-500 font-semibold text-[12px]">Kembali ke <a class="text-sky-600" href="{{ url("/")}}">Halaman Utama</a></p>
+                        <p class="text-gray-500 font-semibold text-[12px]">Kembali ke <a class="text-sky-600" href="{{ route("company")}}">Halaman Utama</a></p>
                     </form>
                 </div>
             </div>

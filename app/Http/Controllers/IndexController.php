@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use App\Models\Project;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,6 +22,16 @@ class IndexController extends Controller
     function login()
     {
         return view('admin.login');
+    }
+    function dashboard()
+    {
+        $data = array(
+            "title" => "Dashboard",
+            "clients" => Client::count(),
+            "projects" => Project::count(),
+            "users" => User::count(),
+        );
+        return view('/admin/dashboard',$data);
     }
     function loginPost(Request $request)
     {
@@ -40,6 +51,6 @@ class IndexController extends Controller
     function logout()
     {
         Auth::logout();
-        return redirect()->route('login');
+        return redirect()->route('admin.login');
     }
 }

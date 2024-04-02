@@ -57,49 +57,6 @@
             </div>
         </div>
     </nav>
-
-    {{-- <header
-        class="md:px-20 lg:px-32 px-4 h-[70px] bg-slate-50 fixed z-10 w-full flex flex-wrap items-center py-2 shadow-md">
-        <div class="flex items-center justify-between flex-1">
-            <a href="#" class="text-4xl font-bold">TAMA</a>
-        </div>
-        <!-- Strip bar -->
-        <label for="menu-toggle" class="block pointer-cursor md:hidden">
-            <svg class="text-gray-900 fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                viewBox="0 0 20 20">
-                <title>menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-            </svg>
-        </label>
-        <input class="hidden" type="checkbox" id="menu-toggle" />
-        <div class="hidden w-full text-sm md:flex md:items-end md:w-auto " id="menu">
-            <nav>
-                <ul class="md:flex items-center text-[14px] justify-evenly text-gray-600 pt-4 md:pt-0">
-                    <li>
-                        <a class="block px-0 py-3 md:p-2" href="#home">Beranda</a>
-                    </li>
-                    <li>
-                        <a class="block px-0 py-3 md:p-2" href="#about-us">Tentang Kami</a>
-                    </li>
-                    <li>
-                        <a class="block px-0 py-3 md:p-2" href="#our-service">Produk & Layanan</a>
-                    </li>
-                    <li>
-                        <a class="block px-0 py-3 md:p-2" href="#our-client">Project</a>
-                    </li>
-                    <li>
-                        <a class="block px-0 py-3 md:p-2" href="#contact">Kontak</a>
-                    </li>
-                    <li>
-                        <a class="block px-0 py-3 md:p-2" href="Company_Profil_QTI.pdf" target="_blank"
-                            title="Unduh Company Profile">
-                            <img src="{{ asset('img/download-icon.png') }}" alt="">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header> --}}
     <!-- Carousel -->
     <section class="relative h-full pt-8 mb-12 overflow-hidden bg-slate-100" id="home">
         <div class="blue-box"></div>
@@ -127,39 +84,6 @@
                                     data-wow-delay="0.2s"
                                     style="visibility: visible; animation-delay: 0.2s; animation-name: slideInRight;">
                                     <img src="{{ asset('img/meeting.png') }}" class="md:w-[450px] lg:w-full px-4">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 2 -->
-                        <div class="swiper-slide swiper-slide-next">
-                            <div class="grid grid-cols-12">
-                                <div class="col-span-12 sm:col-span-4">
-                                    <!-- <img src="https://qti.co.id/images/slider/logo-analitiq.png" class="img-fluid"> -->
-                                    <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam
-                                        est ea fugiat enim quo facere excepturi iste minus! Quam non tempora quasi sed
-                                        asperiores fugiat accusantium libero. Perspiciatis, eveniet dignissimos?</p>
-                                    <a href="#about-us"
-                                        class="block p-1 px-4 mt-3 text-white bg-blue-700 rounded-full w-fit">Details</a>
-                                </div>
-                                <div class="grid col-span-12 sm:col-span-8 place-items-end">
-                                    <img src="https://qti.co.id/images/slider/analytics.png" width="500">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide 3 -->
-                        <div class="swiper-slide">
-                            <div class="grid grid-cols-12">
-                                <div class="col-span-12 sm:col-span-4">
-                                    <h4 class="text-2xl">Lorem ipsum dolor sit amet consectetur</h4>
-                                    <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-                                        amet illo adipisci dignissimos deleniti consectetur nobis neque doloribus odit!
-                                        Praesentium quos totam repellat voluptatibus eos commodi deleniti aut rem animi.
-                                    </p>
-                                    <a href="#about-us"
-                                        class="block p-1 px-4 mt-3 text-white bg-blue-700 rounded-full w-fit">Details</a>
-                                </div>
-                                <div class="grid col-span-12 sm:col-span-8 place-items-end">
-                                    <img src="https://qti.co.id/images/slider/covid.png" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -203,8 +127,8 @@
             </div>
         </div>
     </section>
-    <section class="px-4 py-12 mb-12 overflow-x-hidden md:px-32" id="our-service">
-        <div class="py-16">
+    <section class="px-4 pt-12 pb-2 overflow-x-hidden md:px-32" id="our-service">
+        <div class="pt-16">
             <div class="grid grid-cols-12">
                 <div class="col-span-12">
                     <div class="flex flex-col items-center justify-center wow fadeInUp" data-wow-delay="0.3s"
@@ -275,12 +199,13 @@
     <section class="relative mb-16 overflow-hidden" id="our-client">
         <div class="py-16 my-16 sm:mx-12 md:mx-12 lg:mx-24">
             <div class="grid grid-cols-12">
-                <div class="col-span-12 wow fadeInUp" data-wow-delay="0.3s"
-                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    <div class="text-center">
+                <div class="col-span-12 ">
+                    <div class="text-center wow fadeInDown" data-wow-delay="0.3s"
+                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
                         <h4 class="mb-2 text-2xl text-blue-700 uppercase">Bagian dari Klien Kami</h4>
                     </div>
-                    <div class="flex items-center justify-center py-12 ">
+                    <div class="flex items-center justify-center py-12 wow fadeInUp" data-wow-delay="0.3s"
+                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="grid gap-0 px-4 grid-cols-2 md:grid-cols-5 lg:grid-cols-7 md:gap-6">
                             <?php foreach ($clients as $client) :?>
                             <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
@@ -350,7 +275,7 @@
         </div>
     </section>
     <!-- Kontak -->
-    <section class="my-16 overflow-hidden" id="contact">
+    <section class="overflow-hidden" id="contact">
         <div class="px-4 py-24 sm:mx-12 md:mx-12 lg:mx-32">
             <div class="grid gap-0 grid-col-span-12 md:gap-6">
                 <div class="col-span-12">
