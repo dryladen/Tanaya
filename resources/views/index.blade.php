@@ -4,15 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TAMA</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/style.css'])
-    <link rel="stylesheet" href="https://qti.co.id/vendor/swiper/css/swiper.css">
-    <link rel="stylesheet" href="https://qti.co.id/vendor/animate.css/animate.min.css">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class=" font-popp">
     <!-- ! Navbar -->
-    <nav
-        class="bg-white dark:bg-gray-900 fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+    <nav class="bg-white dark:bg-gray-900 fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
         <div class=" flex flex-wrap items-center justify-between  lg:mx-32 p-4 lg:py-4 lg:px-0">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <span class="text-4xl font-bold">TAMA</span>
@@ -29,7 +26,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky" >
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                 <ul
                     class="flex flex-col justify-end p-4 md:p-0 mt-4 text-sm text-gray-600 border border-gray-100 rounded-lg bg-gray-50 md:space-x-2 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
@@ -201,11 +198,11 @@
             <div class="grid grid-cols-12">
                 <div class="col-span-12 ">
                     <div class="text-center wow fadeInDown" data-wow-delay="0.3s"
-                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
+                        style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
                         <h4 class="mb-2 text-2xl text-red-600 uppercase">Bagian dari Klien Kami</h4>
                     </div>
                     <div class="flex items-center justify-center py-12 wow fadeInUp" data-wow-delay="0.3s"
-                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                        style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="grid gap-0 px-4 grid-cols-2 md:grid-cols-5 lg:grid-cols-7 md:gap-6">
                             <?php foreach ($clients as $client) :?>
                             <div class="flex flex-col items-center justify-end w-full h-full mx-0 space-y-4">
@@ -487,36 +484,20 @@
             </div>
         </div>
     </footer>
-    <script src="https://qti.co.id/vendor/jquery/jquery.min.js"></script>
-    <script src="https://qti.co.id/vendor/popper.js/popper.js"></script>
-    <script src="https://qti.co.id/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://qti.co.id/vendor/swiper/js/swiper.min.js"></script>
-    <script src="https://qti.co.id/vendor/smooth-scroll/smooth-scroll.min.js"></script>
-    <script src="https://qti.co.id/vendor/wow/wow.min.js"></script>
     <!-- ! Data Table -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    @vite('resources/js/index.js')
+    <script src="{{ asset('/js/swiper.min.js') }}"></script>
+    <script src="{{ asset('/js/wow.min.js') }}"></script>
+    @vite(['resources/js/index.js'])
     <script>
+        new WOW().init();
         $(document).ready(function() {
-            $('#project-table').DataTable({
-                // "serverSide": true,
-                // "ajax": {
-                //     url: "", 
-                //     method: "get"
-                // },
-                // "columnDefs" : [{
-                //     'targets': [4], 
-                //     'orderable': false
-                // }],
-            });
+            $('#project-table').DataTable({});
         });
     </script>
 
-    <script>
-        new WOW().init();
-    </script>
 </body>
 
 </html>
