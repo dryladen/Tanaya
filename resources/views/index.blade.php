@@ -74,7 +74,7 @@
                                     <h4 class="mb-2 text-xl text-red-500">MINING & ENVIROMENT CONSULTANT</h4>
                                     <div class="mt-12">
                                         <a href="#about-us"
-                                            class="p-1 px-4 text-white rounded-full bg-slate-600">Explore</a>
+                                            class="p-1 px-4 text-white rounded-full bg-slate-600">> Tentang Kami</a>
                                     </div>
                                 </div>
                                 <div class="flex items-center w-full col-span-12 sm:col-span-6 lg:col-span-6 xl:col-span-8 wow slideInRight"
@@ -98,7 +98,7 @@
     </section>
     {{-- Tentang Perusahaan --}}
     <section class="overflow-x-hidden" id="about-us">
-        <div class="pt-16 mx-4 mt-16 md:mx-32">
+        <div class="pt-16 mx-4 my-16 md:mx-32">
             <div class="grid grid-cols-12 gap-0 md:gap-8">
                 <div class="grid col-span-12 md:col-span-4 place-items-center wow fadeInLeft" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
@@ -107,7 +107,7 @@
                 <div class="flex items-center h-full col-span-12 md:col-span-8">
                     <div class="m-4 wow fadeInRight " data-wow-delay="0.4s"
                         style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
-                        <h4 class="mb-2 text-2xl md:text-4xl text-slate-700 uppercase font-bold">Tentang Perusahaan</h4>
+                        <h4 class="mb-2 text-2xl md:text-4xl text-slate-700 uppercase font-bold">Tentang Kami</h4>
                         <p class="mt-4 text-justify wow fadeInRight" data-wow-delay="0.5s"
                             style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">PT. TANAYA
                             ARTHA GAUTAMA (TAMA)
