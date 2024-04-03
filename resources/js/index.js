@@ -25,3 +25,14 @@ var swiperWithPagination = new Swiper('#swiper-with-pagination', {
     disableOnInteraction: false,
   },
 });
+var swiperWithPagination = new Swiper('#swiper-product', {
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    grabCursor: true,
+  }
+  // , autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
+});

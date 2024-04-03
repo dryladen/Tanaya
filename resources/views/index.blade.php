@@ -45,8 +45,8 @@
                         <a class="block px-0 py-3 md:p-2" href="#contact">Kontak</a>
                     </li>
                     <li>
-                        <a class="block px-0 py-3 md:p-2" href="Company_Profil_QTI.pdf" target="_blank"
-                            title="Unduh Company Profile">
+                        <a class="block px-0 py-3 md:p-2" href="{{ asset('/file/Company Profile 2024.pdf') }}"
+                            target="_blank" title="Unduh Company Profile">
                             <img src="{{ asset('img/download-icon.png') }}" alt="">
                         </a>
                     </li>
@@ -54,16 +54,16 @@
             </div>
         </div>
     </nav>
-    <!-- Carousel -->
+    <!-- Hero Image -->
     <section class="relative h-full pt-8 mb-12 overflow-hidden bg-slate-100" id="home">
-        <div class="blue-box"></div>
+        <div class="red-box"></div>
         <div class="flex items-center md:mx-20 lg:mx-32 ">
-            <div class="slider-header ">
+            <div class="slider-header h-full">
                 <div class="swiper-container swiper-container-initialized swiper-container-horizontal"
                     id="swiper-with-pagination">
                     <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
                         <!-- Slide 1 -->
-                        <div class="h-64 swiper-slide swiper-slide-active">
+                        <div class="h-full swiper-slide swiper-slide-active">
                             <div class="grid grid-cols-12 px-4">
                                 <div class="w-full col-span-12 mb-4 sm:col-span-6 lg:col-span-6 xl:col-span-4 lg:mb-0 wow slideInLeft"
                                     data-wow-delay="0.2s"
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span
+                    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets ml-4"><span
                             class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
                             role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
                             tabindex="0" role="button" aria-label="Go to slide 2"></span><span
@@ -96,17 +96,18 @@
             </div>
         </div>
     </section>
-    <section class="mb-16 overflow-x-hidden" id="about-us">
-        <div class="py-16 mx-4 my-16 md:mx-32">
+    {{-- Tentang Perusahaan --}}
+    <section class="overflow-x-hidden" id="about-us">
+        <div class="pt-16 mx-4 mt-16 md:mx-32">
             <div class="grid grid-cols-12 gap-0 md:gap-8">
                 <div class="grid col-span-12 md:col-span-4 place-items-center wow fadeInLeft" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
                     <img src="{{ asset('img/achievment.png') }}" class="w-52 md:w-72">
                 </div>
                 <div class="flex items-center h-full col-span-12 md:col-span-8">
-                    <div class="my-4 wow fadeInRight " data-wow-delay="0.4s"
+                    <div class="m-4 wow fadeInRight " data-wow-delay="0.4s"
                         style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
-                        <h4 class="text-2xl text-center text-red-600 uppercase">Tentang Perusahaan</h4>
+                        <h4 class="mb-2 text-2xl md:text-4xl text-slate-700 uppercase font-bold">Tentang Perusahaan</h4>
                         <p class="mt-4 text-justify wow fadeInRight" data-wow-delay="0.5s"
                             style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">PT. TANAYA
                             ARTHA GAUTAMA (TAMA)
@@ -124,82 +125,128 @@
             </div>
         </div>
     </section>
+    {{-- Produk & Layanan --}}
     <section class="px-4 pt-12 pb-2 overflow-x-hidden md:px-32" id="our-service">
         <div class="pt-16">
             <div class="grid grid-cols-12">
                 <div class="col-span-12">
                     <div class="flex flex-col items-center justify-center wow fadeInUp" data-wow-delay="0.3s"
                         style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                        <h4 class="mb-2 text-2xl text-red-600 uppercase">Produk & Layanan</h4>
+                        <h4 class="mb-2 text-2xl md:text-4xl text-slate-700 uppercase font-bold">Produk & Layanan</h4>
                         <p class="text-sm text-center w md:w-2/2">Tanaya Artha Gautama menghadirkan layanan terbaik
                             untuk memenuhi kebutuhan produktivitas dan kredibilitas bisnis Anda</p>
                     </div>
-                    <div class="mt-8 content-service">
-                        <ul class="flex flex-col space-y-6">
-                            <li class="shadow-[0_0_6px_0px_rgba(0,0,0,0.3)] text-slate-800 rounded-lg w-full my-0 wow fadeInLeft space-y-2 "
-                                data-wow-delay="0.5s"
-                                style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-                                <a class="flex items-center space-x-4 md:py-4 md:px-6 lg:px-6 lg:pt-6 tab-button">
-                                    <h4 class="p-4 text-2xl text-center md:p-0 md:text-start">Konsultasi, Perencanaan,
-                                        dan Pelaksanaan</h4>
-                                </a>
-                                <ul class="px-4 pb-6 space-y-4 sm:px-6">
-                                    <li class="space-y-2 transition-all wow fadeInLeft hover:-translate-y-2"
-                                        data-wow-delay="0.5s"
-                                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-                                        <p class="px-4 py-2 text-lg text-white rounded-t-md bg-slate-600">1. Eksplorasi
-                                        </p>
-                                        <p
-                                            class="px-4 pb-2 text-sm text-justify shadow-lg rounded-b-md text-slate-600">
-                                            Manajemen Eksplorasi, Penentuan Posisi,
-                                            Pemetaan Topografi dan Geologi, Geofisika,
-                                            Pemboran Eksplorasi dan Perhitungan Sumber
-                                            Daya & Cadangan
-                                        </p>
-                                    </li>
-                                    <li class="space-y-2 transition-all wow fadeInLeft hover:-translate-y-2"
-                                        data-wow-delay="0.6s"
-                                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-                                        <p class="px-4 py-2 text-lg text-white rounded-t-md bg-slate-600">2. Studi
-                                            Kelayakan</p>
-                                        <p
-                                            class="px-4 pb-2 text-sm text-justify shadow-lg rounded-b-md text-slate-600">
-                                            Penyusunan AMDAL dan Studi Kelayakan</p>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="shadow-[0_0_6px_0px_rgba(0,0,0,0.3)] text-slate-800 rounded-lg w-full my-0 wow fadeInRight space-y-2 "
-                                data-wow-delay="0.5s"
-                                style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
-                                <a class="flex items-center space-x-4 md:py-4 md:px-6 lg:px-6 lg:pt-6 tab-button">
-                                    <h4 class="p-4 text-2xl text-center md:p-0 md:text-start">Konsultasi dan
-                                        Perencanaan</h4>
-                                </a>
-                                <ul class="px-4 pb-6 sm:px-6">
-                                    <li class="space-y-2 transition-all wow fadeInRight hover:-translate-y-2"
-                                        data-wow-delay="0.3s"
-                                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
-                                        <p class="px-4 py-2 text-lg text-white rounded-t-md bg-slate-600">Pasca Tambang
-                                            dan Reklamas</p>
-                                        <p
-                                            class="px-4 pb-2 text-sm text-justify shadow-lg rounded-b-md text-slate-600">
-                                            Reklamasi dan Penutupan Tambang</p>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <div class="flex items-center">
+                        <div class="slider-header ">
+                            <div class="swiper-container mt-0 swiper-container-initialized swiper-container-horizontal"
+                                id="swiper-product">
+                                <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+                                    <!-- Slide 1 -->
+                                    <div class="h-full swiper-slide swiper-slide-active">
+                                        <h1 class="text-[32px] leading-10 text-slate-800 font-bold px-4 wow slideInDown text-center"
+                                            data-wow-delay="0.1s"
+                                            style="visibility: visible; animation-delay: 0.1s; animation-name: slideInDown;">
+                                            Konsultasi, Perencanaan,
+                                            dan Pelaksanaan
+                                        </h1>
+                                        <div class="grid grid-cols-12 px-4 mt-8 md:mt-12 content-center">
+                                            <div class="w-full col-span-12 mb-4 sm:col-span-8 lg:col-span-8 xl:col-span-6 content-center lg:mb-0 wow slideInLeft"
+                                                data-wow-delay="0.2s"
+                                                style="visibility: visible; animation-delay: 0.2s; animation-name: slideInLeft;">
+                                                <ul class="flex flex-col space-y-6">
+                                                    <li class="space-y-2 transition-all wow fadeInLeft hover:-translate-y-2"
+                                                        data-wow-delay="0.5s"
+                                                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                                        <p
+                                                            class="px-4 py-2 text-lg text-white rounded-t-md bg-slate-600">
+                                                            1. Eksplorasi
+                                                        </p>
+                                                        <p
+                                                            class="px-4 pb-2 text-sm text-justify shadow-lg rounded-b-md text-slate-600">
+                                                            Manajemen Eksplorasi, Penentuan Posisi,
+                                                            Pemetaan Topografi dan Geologi, Geofisika,
+                                                            Pemboran Eksplorasi dan Perhitungan Sumber
+                                                            Daya & Cadangan
+                                                        </p>
+                                                    </li>
+                                                    <li class="space-y-2 transition-all wow fadeInLeft hover:-translate-y-2"
+                                                        data-wow-delay="0.6s"
+                                                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                                        <p
+                                                            class="px-4 py-2 text-lg text-white rounded-t-md bg-slate-600">
+                                                            2. Studi
+                                                            Kelayakan</p>
+                                                        <p
+                                                            class="px-4 pb-2 text-sm text-justify shadow-lg rounded-b-md text-slate-600">
+                                                            Penyusunan AMDAL dan Studi Kelayakan</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="flex items-center w-full col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-6 wow slideInRight"
+                                                data-wow-delay="0.2s"
+                                                style="visibility: visible; animation-delay: 0.2s; animation-name: slideInRight;">
+                                                <img src="{{ asset('img/contract.png') }}"
+                                                    class="md:w-[450px] lg:w-full px-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="h-full swiper-slide swiper-slide-active">
+                                        <h1 class="text-[32px] leading-10 md:leading-[67.2px] text-slate-800 text-center font-bold px-4 wow slideInDown"
+                                            data-wow-delay="0.1s"
+                                            style="visibility: visible; animation-delay: 0.1s; animation-name: slideInDown;">
+                                            Konsultasi dan Perencanaan
+                                        </h1>
+                                        <div class="grid grid-cols-12 mt-8 md:mt-12">
+                                            <div class="w-full col-span-12 mb-4 sm:col-span-6 lg:col-span-6 xl:col-span-6 lg:mb-0 wow content-center slideInLeft"
+                                                data-wow-delay="0.2s"
+                                                style="visibility: visible; animation-delay: 0.2s; animation-name: slideInLeft;">
+                                                <ul class="px-4 pb-6 sm:px-6">
+                                                    <li class="space-y-2 transition-all wow fadeInRight hover:-translate-y-2"
+                                                        data-wow-delay="0.3s"
+                                                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+                                                        <p
+                                                            class="px-4 py-2 text-lg text-white rounded-t-md bg-slate-600">
+                                                            Pasca Tambang
+                                                            dan Reklamas</p>
+                                                        <p
+                                                            class="px-4 pb-2 text-sm text-justify shadow-lg rounded-b-md text-slate-600">
+                                                            Reklamasi dan Penutupan Tambang</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="flex items-center w-full col-span-12 sm:col-span-6 lg:col-span-6 xl:col-span-6 wow slideInRight"
+                                                data-wow-delay="0.2s"
+                                                style="visibility: visible; animation-delay: 0.2s; animation-name: slideInRight;">
+                                                <img src="{{ asset('img/meeting2.png') }}"
+                                                    class="md:w-[450px] lg:w-full px-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                                        tabindex="0" role="button" aria-label="Go to slide 1"></span>
+                                    <span class="swiper-pagination-bullet" tabindex="0" role="button"
+                                        aria-label="Go to slide 2"></span>
+                                    <span class="swiper-pagination-bullet" tabindex="0" role="button"
+                                        aria-label="Go to slide 3"></span>
+                                </div>
+                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="relative mb-16 overflow-hidden" id="our-client">
-        <div class="py-16 my-16 sm:mx-12 md:mx-12 lg:mx-24">
+    {{-- Klien --}}
+    <section class="relative overflow-hidden" id="our-client">
+        <div class="pt-16 mt-16 sm:mx-12 md:mx-12 lg:mx-24">
             <div class="grid grid-cols-12">
                 <div class="col-span-12 ">
                     <div class="text-center wow fadeInDown" data-wow-delay="0.3s"
                         style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
-                        <h4 class="mb-2 text-2xl text-red-600 uppercase">Bagian dari Klien Kami</h4>
+                        <h4 class="mb-2 text-2xl md:text-4xl text-slate-700 uppercase font-bold">Bagian dari Klien Kami</h4>
                     </div>
                     <div class="flex items-center justify-center py-12 wow fadeInUp" data-wow-delay="0.3s"
                         style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
@@ -217,9 +264,10 @@
             </div>
         </div>
     </section>
+    {{-- Proyek --}}
     <section class="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5 antialiased mt-14">
         <div class="text-center">
-            <h4 class="my-12 text-2xl text-red-600 uppercase">Riwayat Pekerjaan</h4>
+            <h4 class="mb-2 text-2xl md:text-4xl text-slate-700 uppercase font-bold">Riwayat Pekerjaan</h4>
         </div>
         <div class="text-center">
             <h4 class="order-first text-slate-700 uppercase font-extrabold text-7xl  sm:text-9xl">
@@ -278,7 +326,7 @@
                 <div class="col-span-12">
                     <div class="text-center mb-14 wow fadeInUp" data-wow-delay="0.3s"
                         style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                        <h4 class="text-2xl text-red-600 uppercase">Kontak Kami</h4>
+                        <h4 class="mb-2 text-2xl md:text-4xl text-slate-700 uppercase font-bold">Kontak Kami</h4>
                     </div>
                     <div class="grid grid-cols-12 gap-0 sm:gap-8">
                         <div class="col-span-12 mb-4 lg:col-span-5 lg:mb-0 wow fadeInLeft" data-wow-delay="0.5s"
@@ -497,7 +545,6 @@
             $('#project-table').DataTable({});
         });
     </script>
-
 </body>
 
 </html>
