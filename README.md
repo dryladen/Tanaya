@@ -2,5 +2,5 @@
 `MINING & ENVIROMENT CONSULTANT`
 
 ## Built With
-- [![Laravel][Laravel.com]][Laravel-url] `9.19`
+* [![Laravel][Laravel.com]][Laravel-url]
 - [[]]
